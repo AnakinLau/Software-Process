@@ -31,7 +31,7 @@ class Sample(object):
             raise ValueError(functionName + "invalid tails")
         
         constant = self.calculateConstant(self.n)
-        integration = self.integrate(t, self.n, self.f)
+        integration = self.integrate(0, t, self.n, self.f)
         if(tails == 1):
             result = constant * integration + 0.5
         else:
@@ -64,7 +64,7 @@ class Sample(object):
         result = base ** exponent
         return result
     
-    def integrate(self, lowBound=0 , highBound, n, f):
+    def integrate(self, lowBound, highBound, n, f):
         epsilon = 0.001
         simpsonOld = 0.0
         simpsonNew = epsilon
