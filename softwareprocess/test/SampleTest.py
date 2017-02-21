@@ -250,5 +250,6 @@ class SampleTest(unittest.TestCase):
 
     def test700_010_ShouldBeOneHalve(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.f(2, 1), 0.50000)
+            
+        self.assertAlmostEquals(mySample.integrate(0, 1, self.n, self.f), 0.50000)
 
