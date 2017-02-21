@@ -22,8 +22,8 @@
             <file leaf-file-name="Sample.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="601">
-                    <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+                  <state relative-caret-position="448">
+                    <caret line="71" column="10" lean-forward="false" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
                     <folding />
                   </state>
                 </provider>
@@ -62,8 +62,8 @@
       <file leaf-file-name="SampleTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/test/SampleTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="254" column="72" lean-forward="false" selection-start-line="254" selection-start-column="72" selection-end-line="254" selection-end-column="72" />
+            <state relative-caret-position="396">
+              <caret line="252" column="21" lean-forward="true" selection-start-line="252" selection-start-column="21" selection-end-line="252" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -393,18 +393,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 05h 11m 26s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 06h 27m 18s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 06h 27m 32s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 06h 27m 48s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.02.21 at 06h 30m 37s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -421,6 +409,18 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.02.21 at 13h 55m 28s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 14h 05m 21s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 14h 05m 39s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 14h 07m 15s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.02.21 at 14h 08m 42s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -537,16 +537,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        <state relative-caret-position="448">
+          <caret line="71" column="10" lean-forward="false" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/SampleTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="254" column="72" lean-forward="false" selection-start-line="254" selection-start-column="72" selection-end-line="254" selection-end-column="72" />
+        <state relative-caret-position="396">
+          <caret line="252" column="21" lean-forward="true" selection-start-line="252" selection-start-column="21" selection-end-line="252" selection-end-column="21" />
           <folding />
         </state>
       </provider>
