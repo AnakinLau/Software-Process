@@ -234,4 +234,19 @@ class SampleTest(unittest.TestCase):
     def test400_020_ShouldCalculateF(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.f(1, 5), 0.578703704)
-        
+
+
+# 700 integrate
+# Analysis
+#    inputs
+#        n -> numeric mandatory validated ????
+#        u -> float mandatory validated??????
+#    outputs
+#        float .GE. 0
+# Happy path
+#    nominal case:  f(1) -> 0.5787
+# Sad path
+#            none ... x is pre-validated
+
+    def test700_010_ShouldBeOneHalve(self):
+        mySample = SM.Sample(self.nominalN)
