@@ -65,8 +65,32 @@ class Sample(object):
         return result
     
     def integrate(self, lowBound, highBound, n, f):
-        pass
+        epsilon = 0.001
+        simpsonOld = 0.0
+        simpsonNew = epsilon
+        s = 4
+        while (abs((simpsonNew - simpsonOld)/ simpsonNew) > epsilon):
+            simpsonOld = simpsonNew
+            w = (highBound - lowBound) / s
+            sCounter = s - 1
+            sIndex = lowBound  # is w + lowbound as loop moves
+            twoFourSwitch = True  # 4 when True, 2 when False
+            simpsonNewTemp = f(sIndex, n)
+            sIndex = sIndex + w
+            while (sIndex < highBound) :
+                if (twoFourSwitch is True):
+                    simpsonNewTemp = simpsonNewTemp + 4 * f(sIndex, n)
+                else :
+                    simpsonNewTemp = simpsonNewTemp + 2 * f(sIndex, n)
+
+                twoFourSwitch = not twoFourSwitch
+                sIndex = sIndex + w
+            simpsonNewTemp = simpsonNewTemp + f(sIndex, n)
+            simpsonNewTemp = simpsonNewTemp * (w/3)
+            simpsonNew = simpsonNewTemp
+            s = s * 2
         
+        return simpsonNew
         
     
         
