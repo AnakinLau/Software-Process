@@ -238,20 +238,22 @@ class SampleTest(unittest.TestCase):
 
 # 700 integrate
 # Analysis
-#    inputs
-#        n -> numeric mandatory validated ????
-#        u -> float mandatory validated??????
-#    outputs
-#        float .GE. 0
-# Happy path
-#    nominal case:  f(1) -> 0.5787
-# Sad path
-#            none ... x is pre-validated
+
 
     def test700_010_ShouldBeOneHalve(self):
         mySample = SM.Sample(self.nominalN)
         def f1(u, n):
+            return u
+        self.assertAlmostEquals(mySample.integrate(0, 1.0, 2, f1), 0.5)
+
+    def test700_010_ShouldBeOneThird(self):
+        mySample = SM.Sample(self.nominalN)
+        def f1(u, n):
             return u**2
         self.assertAlmostEquals(mySample.integrate(0, 1.0, 2, f1), 0.33333333)
-        #self.assertAlmostEquals(mySample.p(1.0, 1), 0.33333333)
 
+    def test700_010_ShouldBeOneSeventh(self):
+        mySample = SM.Sample(self.nominalN)
+        def f1(u, n):
+            return u**6
+        self.assertAlmostEquals(mySample.integrate(0, 1.0, 2, f1), 0.33333333)
