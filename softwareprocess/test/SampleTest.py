@@ -252,5 +252,5 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         def f1(u, n):
             return u
-        self.assertAlmostEquals(mySample.integrate(0, 1, self.n, f1), 0.50000)
+        self.assertAlmostEquals(mySample.integrate(0, 2, 30, f1), 0.50000)
 
