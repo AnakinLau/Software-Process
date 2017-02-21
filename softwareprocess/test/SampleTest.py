@@ -261,5 +261,5 @@ class SampleTest(unittest.TestCase):
     def test700_010_ShouldBeOne101(self):
         mySample = SM.Sample(self.nominalN)
         def f1(u, n):
-            return u**6
+            return u**100
         self.assertAlmostEquals(mySample.integrate(0, 1.0, 2, f1), 0.00990099009)
