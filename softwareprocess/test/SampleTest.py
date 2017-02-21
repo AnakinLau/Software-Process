@@ -253,5 +253,5 @@ class SampleTest(unittest.TestCase):
         def f(u, n):
             return u
 
-        self.assertAlmostEquals(mySample.p(1.0), 0.50000)
+        self.assertAlmostEquals(mySample.integrate(0, 4, 2, f), 0.50000)
 
