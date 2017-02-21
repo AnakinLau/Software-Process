@@ -82,7 +82,7 @@ class Sample(object):
                     simpsonNewTemp = simpsonNewTemp + 4 * f(sIndex, n)
                 else :
                     simpsonNewTemp = simpsonNewTemp + 2 * f(sIndex, n)
-                #twoFourSwitch = not twoFourSwitch
+                twoFourSwitch = not twoFourSwitch
                 sIndex = sIndex + w
             simpsonNewTemp = simpsonNewTemp + f(sIndex, n)
             simpsonNewTemp = simpsonNewTemp * (w/3)
