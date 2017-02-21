@@ -248,9 +248,9 @@ class SampleTest(unittest.TestCase):
 # Sad path
 #            none ... x is pre-validated
 
-    def test700_010_ShouldBeOneHalve(self):
-        mySample = SM.Sample(self.nominalN)
-        def f1(u, n):
-            return u
-        self.assertAlmostEquals(mySample.integrate(0, 2, 30, f1), 0.50000)
+    #def test700_010_ShouldBeOneHalve(self):
+    #    mySample = SM.Sample(self.nominalN)
+    #    def f1(u, n):
+    #        return u#
+    #    self.assertAlmostEquals(mySample.integrate(0, 2, 30, f1), 0.50000)
 
