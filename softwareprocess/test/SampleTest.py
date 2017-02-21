@@ -252,6 +252,6 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         def f(u, n):
             return u
-        
-        self.assertAlmostEquals(mySample.p(1), 0.50000)
+
+        self.assertAlmostEquals(mySample.p(1.0), 0.50000)
 
