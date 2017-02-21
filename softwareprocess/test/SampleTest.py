@@ -249,9 +249,8 @@ class SampleTest(unittest.TestCase):
 #            none ... x is pre-validated
 
     def test700_010_ShouldBeOneHalve(self):
-       mySample = SM.Sample(self.nominalN)
-       def f1(self, u, n):
-           return u**2
-
-       self.assertAlmostEquals(mySample.integrate(0, 1, 2, f1), 0.33333333)
+        mySample = SM.Sample(self.nominalN)
+        def f1(self, u, n):
+            return u**2
+        self.assertAlmostEquals(mySample.integrate(0, 1, 2, f1), 0.33333333)
 
