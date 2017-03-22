@@ -11,7 +11,10 @@ def dispatch(values=None):
 
     #Perform designated function
     if(values['op'] == 'adjust'):
-        if()
+        if(not('observation' in values)):
+            values['error'] = 'mandatory information is missing'
+            values['op']
+            return values
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
