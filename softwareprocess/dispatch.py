@@ -24,4 +24,5 @@ def dispatch(values=None):
         return values    #This calculation is stubbed out
     else:
         values['error'] = 'op is not a legal operation'
+        del values['op']
         return values
