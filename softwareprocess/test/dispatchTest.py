@@ -38,9 +38,9 @@ class dispatchTest(unittest.TestCase):
     #    self.assertEquals(expectedString, DSP.dispatch())
 
     def test100_020_ShouldReturnParameterIsNotADictionary(self):
-        expectedString = {'error' : 'parameter is missing'}
-        #self.assertIsInstance(DSP.dispatch())
-        # additional tests are for boundary value coverage
-        #self.assertIsInstance(SM.Sample(2), SM.Sample)
-        #self.assertIsInstance(SM.Sample(29), SM.Sample)
-        self.assertEquals(expectedString, DSP.dispatch())
+        expectedString = {'error':'parameter is not a dictionary'}
+        self.assertEquals(expectedString, DSP.dispatch(42))
+
+    def test100_021_ShouldReturnParameterIsNotALegalOperation(self):
+        expectedString = {'error':'op is not a legal operation'}
+        self.assertEquals(expectedString, DSP.dispatch({'op': 'unknown'}))
