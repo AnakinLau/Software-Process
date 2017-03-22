@@ -29,7 +29,7 @@ class dispatchTest(unittest.TestCase):
         #self.assertIsInstance(SM.Sample(29), SM.Sample)
         self.assertEquals(expectedString, DSP.dispatch())
 
-     def test100_011_NotShouldReturnParameterIsMissing(self):
+    def test100_011_NotShouldReturnParameterIsMissing(self):
         expectedString = {'rror' : 'parameter is missing'}
         #self.assertIsInstance(DSP.dispatch())
         # additional tests are for boundary value coverage
