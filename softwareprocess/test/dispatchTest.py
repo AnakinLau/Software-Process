@@ -21,8 +21,10 @@ class dispatchTest(unittest.TestCase):
     #
     # Happy path
 
-    def test100_010_ShouldConstruct(self):
-        self.assertIsInstance(DSP.Sample(self.nominalN), SM.Sample)
+    def test100_010_ShouldReturnParameterIsMissing(self):
+        expectedString = {'error' : 'parameter is missing'}
+        #self.assertIsInstance(DSP.dispatch())
         # additional tests are for boundary value coverage
-        self.assertIsInstance(SM.Sample(2), SM.Sample)
-        self.assertIsInstance(SM.Sample(29), SM.Sample)
+        #self.assertIsInstance(SM.Sample(2), SM.Sample)
+        #self.assertIsInstance(SM.Sample(29), SM.Sample)
+        self.assertEquals(expectedString, DSP.dispatch())
