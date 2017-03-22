@@ -13,7 +13,7 @@ def dispatch(values=None):
     if(values['op'] == 'adjust'):
         if(not('observation' in values)):
             values['error'] = 'mandatory information is missing'
-            values['op']
+            del values['op']
             return values
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
