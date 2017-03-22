@@ -44,3 +44,7 @@ class dispatchTest(unittest.TestCase):
     def test100_021_ShouldReturnParameterIsNotALegalOperation(self):
         expectedString = {'error':'op is not a legal operation'}
         self.assertEquals(expectedString, DSP.dispatch({'op': 'unknown'}))
+
+    def test200_010_ShouldReturnParameterIsNotALegalOperation(self):
+        expectedString = {'error':'mandatory information is missing'}
+        self.assertEquals(expectedString, DSP.dispatch({'op': 'adjust'}))
