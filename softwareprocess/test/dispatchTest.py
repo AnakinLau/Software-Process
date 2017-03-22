@@ -19,7 +19,7 @@ class dispatchTest(unittest.TestCase):
     #                out-of-bounds n    n=1; n=30
     #                missing n
     #
-    # Happy path
+    # Sad path
 
     def test100_010_ShouldReturnParameterIsMissing(self):
         expectedString = {'error' : 'parameter is missing'}
@@ -45,6 +45,11 @@ class dispatchTest(unittest.TestCase):
         expectedString = {'error':'op is not a legal operation'}
         self.assertEquals(expectedString, DSP.dispatch({'op': 'unknown'}))
 
-    def test200_010_ShouldReturnParameterIsNotALegalOperation(self):
+    def test200_010_ShouldReturnMandatoryInfoIsMissing(self):
         expectedString = {'error':'mandatory information is missing'}
         self.assertEquals(expectedString, DSP.dispatch({'op': 'adjust'}))
+
+    #Happy Path
+    def test201_010_ShouldReturnMandatoryInfoIsMissing(self):
+        expectedString = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
+        self.assertEquals(expectedString, DSP.dispatch({'observation': '42d0.0',  'op': 'adjust'}))
