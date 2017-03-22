@@ -36,3 +36,11 @@ class dispatchTest(unittest.TestCase):
     #    #self.assertIsInstance(SM.Sample(2), SM.Sample)
     #    #self.assertIsInstance(SM.Sample(29), SM.Sample)
     #    self.assertEquals(expectedString, DSP.dispatch())
+
+    def test100_020_ShouldReturnParameterIsNotADictionary(self):
+        expectedString = {'error' : 'parameter is missing'}
+        #self.assertIsInstance(DSP.dispatch())
+        # additional tests are for boundary value coverage
+        #self.assertIsInstance(SM.Sample(2), SM.Sample)
+        #self.assertIsInstance(SM.Sample(29), SM.Sample)
+        self.assertEquals(expectedString, DSP.dispatch())
