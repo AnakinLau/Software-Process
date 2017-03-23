@@ -142,12 +142,14 @@ def getDip(dictInput):
 def getRefraction(dictInput):
     refractionP1 = (-0.00452 * int(dictInput['pressure']))
     refractionP2 = (273 + ((int(dictInput['temperature']) - 32) / 1.8))
-    posOfd = dictInput['observation'].find('d')
-    degString = dictInput['observation'][0: posOfd]
-    minString = dictInput['observation'][posOfd + 1: len(dictInput['observation'])]
-    degToInt = int(degString)
-    print("degString= {0}".format(degString))
-    minToFloat = float(minString)
+    #posOfd = dictInput['observation'].find('d')
+    #degString = dictInput['observation'][0: posOfd]
+    #minString = dictInput['observation'][posOfd + 1: len(dictInput['observation'])]
+    #degToInt = int(degString)
+    #print("degString= {0}".format(degString))
+    #minToFloat = float(minString)
+    degToInt = getObservationDegToInt(dictInput['observation'])
+    minToFloat = getObservationMinToFloat(dictInput['observation'])
     print("minToFloat= {0}".format(minToFloat))
     refractionP3 = (math.tan(math.radians(degToInt + (minToFloat/60))))
     print("refractionP1= {0}, refractionP2= {1}, "
@@ -158,10 +160,13 @@ def getAltitude(dictInput):
     dip = getDip(dictInput)
     refraction = getRefraction(dictInput)
 
+# Helper methods getting degrees and minutes
 def getObservationDegToInt(observationInput):
     posOfd = observationInput.find('d')
     degString = observationInput[0: posOfd]
+    return int(degString)
+
+def getObservationMinToFloat(observationInput):
+    posOfd = observationInput.find('d')
     minString = observationInput[posOfd + 1: len(observationInput)]
-    degToInt = int(degString)
-    print("degString= {0}".format(degString))
-    minToFloat = float(minString)
+    return float(minString)
