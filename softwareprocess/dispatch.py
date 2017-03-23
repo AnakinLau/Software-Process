@@ -94,8 +94,10 @@ def checkObservationFormat(observation):
 
 def checkHeightFormat(height):
     try:
-        float(height)
-        return True
+        if(float(height) >= 0):
+            return True
+        else
+            return False
     except ValueError:
         return False
 
