@@ -111,3 +111,14 @@ def checkTemperatureFormat(temperature):
             return False
     except ValueError:
         return False
+
+def checkPressureFormat(pressure):
+    try:
+        if(float(pressure) >= -20 and float(pressure) <= 120
+           and pressure.count('.') == 0):
+
+            return True
+        else:
+            return False
+    except ValueError:
+        return False
