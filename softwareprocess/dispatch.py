@@ -146,6 +146,7 @@ def getRefraction(dictInput):
     degString = dictInput['observation'][0: posOfd]
     minString = dictInput['observation'][posOfd + 1: len(dictInput['observation'])]
     degToInt = int(degString)
+    print("degString= {0}".format(degString))
     minToFloat = float(minString)
     print("minToFloat= {0}".format(minToFloat))
     refractionP3 = (math.tan((degToInt + (minToFloat/60))))
