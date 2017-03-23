@@ -153,3 +153,15 @@ def getRefraction(dictInput):
     print("refractionP1= {0}, refractionP2= {1}, "
           "refractionP3= {2}".format(refractionP1, refractionP2, refractionP3))
     return refractionP1 / refractionP2 / refractionP3
+
+def getAltitude(dictInput):
+    dip = getDip(dictInput)
+    refraction = getRefraction(dictInput)
+
+def getObservationDegToInt(observationInput):
+    posOfd = observationInput.find('d')
+    degString = observationInput[0: posOfd]
+    minString = observationInput[posOfd + 1: len(observationInput)]
+    degToInt = int(degString)
+    print("degString= {0}".format(degString))
+    minToFloat = float(minString)

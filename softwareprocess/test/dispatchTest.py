@@ -347,7 +347,11 @@ class dispatchTest(unittest.TestCase):
                                                       'height': '6', 'horizon': 'artificial',
                                                       'temperature': '72', 'pressure': '1010'}), 5)
 
-
+    def test203_002_RefractionShouldReturnNumber(self):
+        expectedNumber = -0.01535636
+        self.assertAlmostEquals(expectedNumber, DSP.getRefraction({'observation': '45d15.2',  'op': 'adjust',
+                                                      'height': '6', 'horizon': 'natural',
+                                                      'temperature': '71', 'pressure': '1010'}), 5)
 
 
 
