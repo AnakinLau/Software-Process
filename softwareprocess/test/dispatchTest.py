@@ -324,7 +324,7 @@ class dispatchTest(unittest.TestCase):
         horizonInput = 'nAtuRal  '
         self.assertEquals(False, DSP.checkHorizonFormat(horizonInput));
 
-
+    # Testing Dip
     def test202_001_DipShouldReturnZero(self):
         expectedNumber = 0
         self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'horizon': 'artificial'}))
@@ -332,3 +332,7 @@ class dispatchTest(unittest.TestCase):
     def test202_002_DipShouldReturnNumber(self):
         expectedNumber = float((-0.97 * 2 / 60))
         self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '4', 'horizon': 'natural'}))
+
+    def test202_003_DipShouldReturnNumber(self):
+        expectedNumber = float((-0.97 * 4 / 60))
+        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '16', 'horizon': 'natural'}))
