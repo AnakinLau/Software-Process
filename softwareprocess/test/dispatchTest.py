@@ -158,7 +158,7 @@ class dispatchTest(unittest.TestCase):
 
     def test202_208_ShouldReturnCheckObservationPass(self):
         observationInput = '30d59.9'
-        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+        self.assertEquals(True, DSP.checkObservationFormat(observationInput));
 
     def test202_209_ShouldReturnCheckObservationFail(self):
         observationInput = '30d-0.5'
