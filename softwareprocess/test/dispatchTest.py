@@ -284,11 +284,11 @@ class dispatchTest(unittest.TestCase):
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_505_ShouldReturnCheckPressureFail(self):
-        pressureInput = '99'
+        pressureInput = '121'
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_506_ShouldReturnCheckPressureFail(self):
-        pressureInput = '1101'
+        pressureInput = '-21'
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_507_ShouldReturnCheckPressureFail(self):

@@ -123,4 +123,4 @@ def checkPressureFormat(pressure):
     except ValueError:
         return False
 
-
+def checkHorizonFormat(Horizon):
