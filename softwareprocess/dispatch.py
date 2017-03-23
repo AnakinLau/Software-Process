@@ -148,4 +148,5 @@ def getRefraction(dictInput):
     degToInt = int(degString)
     minToFloat = float(minString)
     refractionP3 = (math.tan((degToInt + (minToFloat/60))))
-    
+
+    return refractionP1 / refractionP2 / refractionP3
