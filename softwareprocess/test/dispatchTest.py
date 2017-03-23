@@ -228,6 +228,39 @@ class dispatchTest(unittest.TestCase):
         heightInput = '-0.12'
         self.assertEquals(False, DSP.checkHeightFormat(heightInput));
 
+    def test202_400_ShouldReturnCheckTemperaturePass(self):
+        temperatureInput = '-20'
+        self.assertEquals(True, DSP.checkTemperatureFormat(temperatureInput));
+
+    def test202_401_ShouldReturnCheckTemperaturePass(self):
+        temperatureInput = '120'
+        self.assertEquals(True, DSP.checkTemperatureFormat(temperatureInput));
+
+    def test202_402_ShouldReturnCheckTemperaturePass(self):
+        temperatureInput = '80'
+        self.assertEquals(True, DSP.checkTemperatureFormat(temperatureInput));
+
+    def test202_403_ShouldReturnCheckTemperatureFail(self):
+        temperatureInput = '-80'
+        self.assertEquals(False, DSP.checkTemperatureFormat(temperatureInput));
+
+    def test202_404_ShouldReturnCheckTemperatureFail(self):
+        temperatureInput = '80.0'
+        self.assertEquals(False, DSP.checkTemperatureFormat(temperatureInput));
+
+    def test202_405_ShouldReturnCheckTemperatureFail(self):
+        temperatureInput = '121'
+        self.assertEquals(False, DSP.checkTemperatureFormat(temperatureInput));
+
+    def test202_406_ShouldReturnCheckTemperatureFail(self):
+        temperatureInput = '-21'
+        self.assertEquals(False, DSP.checkTemperatureFormat(temperatureInput));
+
+    def test202_407_ShouldReturnCheckTemperatureFail(self):
+        temperatureInput = 'b'
+        self.assertEquals(False, DSP.checkTemperatureFormat(temperatureInput));
+
+
     def test202_001_DipShouldReturnZero(self):
         expectedNumber = 0
         self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'horizon': 'natural'}))

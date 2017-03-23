@@ -101,9 +101,11 @@ def checkHeightFormat(height):
     except ValueError:
         return False
 
-def checkTemperatureFormat(height):
+def checkTemperatureFormat(temperature):
     try:
-        if(float(height) >= 0):
+        if(float(temperature) >= -20 and float(temperature) <= 120
+           and temperature.count('.') == 0):
+
             return True
         else:
             return False
