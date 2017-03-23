@@ -127,9 +127,14 @@ class dispatchTest(unittest.TestCase):
         self.assertEquals(correctReturnedDict['pressure'], parsedDict['pressure']);
         self.assertEquals(correctReturnedDict['horizon'], parsedDict['horizon']);
 
-    def test202_201_ShouldReturnCheckObservationFail(self):
+    def test202_201_ShouldReturnCheckObservationPass(self):
         observationInput = '30d1.5'
         self.assertEquals(True, DSP.checkObservationFormat(observationInput));
+
+    def test202_202_ShouldReturnCheckObservationPass(self):
+        observationInput = '30d1.5'
+        self.assertEquals(True, DSP.checkObservationFormat(observationInput));
+
 
 
     def test202_001_DipShouldReturnZero(self):

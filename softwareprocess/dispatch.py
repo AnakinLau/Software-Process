@@ -58,6 +58,12 @@ def checkObservationFormat(observation):
     degString = observation[0: posOfd]
     minString = observation[posOfd + 1: len(observation)]
 
+    if(not(degString.isdigit())):
+        return False
+    if(int(degString) < 0 && int(degString) >= 90):
+        return False
+    if(not(is_number(minString))):
+        return False
     if(not(isinstance(degString, int))):
         return False
     if(not(isinstance(minString, float))):
