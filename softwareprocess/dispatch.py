@@ -15,6 +15,18 @@ def dispatch(values=None):
             values['error'] = 'mandatory information is missing'
             del values['op']
             return values
+        # All default optional values
+        if(not('height' in values)):
+            values['height'] = '0'
+        if(not('temperature' in values)):
+            values['temperature'] = '72'
+        if(not('pressure' in values)):
+            values['pressure'] = '1010'
+        if(not('horizon' in values)):
+            values['horizon'] = 'natural'
+
+
+
         return values    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
