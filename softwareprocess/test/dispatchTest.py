@@ -224,6 +224,10 @@ class dispatchTest(unittest.TestCase):
         heightInput = 'b'
         self.assertEquals(False, DSP.checkHeightFormat(heightInput));
 
+    def test202_305_ShouldReturnCheckHeightFail(self):
+        heightInput = '-0.12'
+        self.assertEquals(False, DSP.checkHeightFormat(heightInput));
+
     def test202_001_DipShouldReturnZero(self):
         expectedNumber = 0
         self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'horizon': 'natural'}))
