@@ -200,6 +200,9 @@ class dispatchTest(unittest.TestCase):
         observationInput = '-d00.0g'
         self.assertEquals(False, DSP.checkObservationFormat(observationInput));
 
+    def test202_219_ShouldReturnCheckObservationFail(self):
+        observationInput = '001d0.0'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
 
     def test202_001_DipShouldReturnZero(self):
         expectedNumber = 0
