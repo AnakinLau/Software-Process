@@ -327,12 +327,32 @@ class dispatchTest(unittest.TestCase):
     # Testing Dip
     def test202_001_DipShouldReturnZero(self):
         expectedNumber = 0
-        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'horizon': 'artificial'}))
+        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust',
+                                                      'height': '0', 'horizon': 'artificial'}))
 
     def test202_002_DipShouldReturnNumber(self):
         expectedNumber = float((-0.97 * 2 / 60))
-        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '4', 'horizon': 'natural'}))
+        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust',
+                                                      'height': '4', 'horizon': 'natural'}))
 
     def test202_003_DipShouldReturnNumber(self):
         expectedNumber = float((-0.97 * 4 / 60))
-        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '16', 'horizon': 'natural'}))
+        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust',
+                                                      'height': '16', 'horizon': 'natural'}))
+
+    # Test Refraction
+    def test203_001_RefractionShouldReturnNumber(self):
+        expectedNumber = -0.087698465
+        self.assertAlmostEquals(expectedNumber, DSP.getDip({'observation': '10d0.0',  'op': 'adjust',
+                                                      'height': '6', 'horizon': 'artificial',
+                                                      'temperature': '72', 'pressure': '1010'}), 5)
+
+
+
+
+
+
+
+
+
+

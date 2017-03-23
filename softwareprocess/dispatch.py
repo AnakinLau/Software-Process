@@ -139,3 +139,13 @@ def getDip(dictInput):
     else :
         return 0
 
+def getRefraction(dictInput):
+    refractionP1 = (-0.00452 * int(dictInput['pressure']))
+    refractionP2 = (273 + ((int(dictInput['temperature']) - 32) / 1.8))
+    posOfd = dictInput['observation'].find('d')
+    degString = dictInput['observation'][0: posOfd]
+    minString = dictInput['observation'][posOfd + 1: len(dictInput['observation'])]
+    degToInt = int(degString)
+    minToFloat = float(minString)
+    refractionP3 = (math.tan((degToInt + (minToFloat/60))))
+    
