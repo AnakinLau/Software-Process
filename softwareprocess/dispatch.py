@@ -151,7 +151,8 @@ def getRefraction(dictInput):
     degToInt = getObservationDegToInt(dictInput['observation'])
     minToFloat = getObservationMinToFloat(dictInput['observation'])
     print("minToFloat= {0}".format(minToFloat))
-    refractionP3 = (math.tan(math.radians(degToInt + (minToFloat/60))))
+    refractionP3 = (math.tan(math.radians(degToInt +
+                                          (convertDegMinToNumber(minToFloat)))))
     print("refractionP1= {0}, refractionP2= {1}, "
           "refractionP3= {2}".format(refractionP1, refractionP2, refractionP3))
     return refractionP1 / refractionP2 / refractionP3
