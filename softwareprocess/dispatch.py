@@ -149,9 +149,7 @@ def getRefraction(dictInput):
     print("degString= {0}".format(degString))
     minToFloat = float(minString)
     print("minToFloat= {0}".format(minToFloat))
-    refractionP3 = (math.tan((degToInt + (minToFloat/60))))
+    refractionP3 = (math.tan(math.radians(degToInt + (minToFloat/60))))
     print("refractionP1= {0}, refractionP2= {1}, "
           "refractionP3= {2}".format(refractionP1, refractionP2, refractionP3))
-
-
     return refractionP1 / refractionP2 / refractionP3
