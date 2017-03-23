@@ -170,3 +170,9 @@ def getObservationMinToFloat(observationInput):
     posOfd = observationInput.find('d')
     minString = observationInput[posOfd + 1: len(observationInput)]
     return float(minString)
+
+def convertMinToNumber(minNum):
+    return minNum/60
+
+def convertDegMinToNumber(degInput, minInput):
+    return degInput + convertMinToNumber(minInput)
