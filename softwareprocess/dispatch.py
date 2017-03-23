@@ -78,7 +78,7 @@ def checkObservationFormat(observation):
     # check if deg is a digit first
     if(not(degString.isdigit())):
         return False
-    if(int(degString) < 0 and int(degString) >= 90):
+    if(int(degString) < 0 or int(degString) >= 90):
         return False
     #if(not(is_(minString))):
     #    return False
