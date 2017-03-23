@@ -96,8 +96,16 @@ def checkHeightFormat(height):
     try:
         if(float(height) >= 0):
             return True
-        else
+        else:
             return False
     except ValueError:
         return False
 
+def checkTemperatureFormat(height):
+    try:
+        if(float(height) >= 0):
+            return True
+        else:
+            return False
+    except ValueError:
+        return False
