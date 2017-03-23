@@ -54,10 +54,25 @@ class dispatchTest(unittest.TestCase):
         expectedString = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
         self.assertEquals(expectedString, DSP.dispatch({'observation': '42d0.0',  'op': 'adjust'}))
 
+    #
+
     # Should change the string to have added default params if not already there
     def test202_100_ShouldReturnWithDefaultParam(self):
-        expectedString = {'observation': '42d0.0',  'op': 'adjust', 'height': '0', }
-        self.assertEquals(expectedString, DSP.dispatch({'observation': '42d0.0',  'op': 'adjust'}))
+        entryDict = {'observation': '42d0.0',  'op': 'adjust'}
+        correctReturnedDict = {'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'temperature': '72'
+            , 'pressure': '1010', 'horizon' : 'natural'}
+
+        parsedDict = DSP.getDefaultOptionalValues(entryDict)
+
+        self.assertEquals(correctReturnedDict['observation'], parsedDict['observation']);
+        self.assertEquals(correctReturnedDict['op'], parsedDict['op']);
+        self.assertEquals(correctReturnedDict['height'], parsedDict['height']);
+        self.assertEquals(correctReturnedDict['temperature'], parsedDict['temperature']);
+        self.assertEquals(correctReturnedDict['pressure'], parsedDict['pressure']);
+        self.assertEquals(correctReturnedDict['horizon'], parsedDict['horizon']);
+
+
+
 
 
 

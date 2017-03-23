@@ -38,3 +38,15 @@ def dispatch(values=None):
         values['error'] = 'op is not a legal operation'
         del values['op']
         return values
+
+def getDefaultOptionalValues(values):
+    # All default optional values
+    if(not('height' in values)):
+        values['height'] = '0'
+    if(not('temperature' in values)):
+        values['temperature'] = '72'
+    if(not('pressure' in values)):
+        values['pressure'] = '1010'
+    if(not('horizon' in values)):
+        values['horizon'] = 'natural'
+    return values
