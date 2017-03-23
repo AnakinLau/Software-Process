@@ -168,9 +168,38 @@ class dispatchTest(unittest.TestCase):
         observationInput = '30d0.-5'
         self.assertEquals(False, DSP.checkObservationFormat(observationInput));
 
-    def test202_210_ShouldReturnCheckObservationFail(self):
+    def test202_211_ShouldReturnCheckObservationFail(self):
         observationInput = '30d0.45'
         self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_212_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d0.00'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_213_ShouldReturnCheckObservationFail(self):
+        observationInput = '90d0.0'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_214_ShouldReturnCheckObservationFail(self):
+        observationInput = '91d0.0'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_215_ShouldReturnCheckObservationPass(self):
+        observationInput = '89d0.0'
+        self.assertEquals(True, DSP.checkObservationFormat(observationInput));
+
+    def test202_216_ShouldReturnCheckObservationFail(self):
+        observationInput = '-01d0.0'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_217_ShouldReturnCheckObservationFail(self):
+        observationInput = 'sd0.0'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_218_ShouldReturnCheckObservationFail(self):
+        observationInput = '-d00.0g'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
 
     def test202_001_DipShouldReturnZero(self):
         expectedNumber = 0
