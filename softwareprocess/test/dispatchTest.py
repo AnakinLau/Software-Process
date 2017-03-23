@@ -264,15 +264,15 @@ class dispatchTest(unittest.TestCase):
 
 # Test checkPressureFormat
     def test202_500_ShouldReturnCheckPressurePass(self):
-        pressureInput = '1100'
+        pressureInput = '-0'
         self.assertEquals(True, DSP.checkPressureFormat(pressureInput));
 
     def test202_501_ShouldReturnCheckPressurePass(self):
-        pressureInput = '100'
+        pressureInput = '120'
         self.assertEquals(True, DSP.checkPressureFormat(pressureInput));
 
     def test202_502_ShouldReturnCheckPressurePass(self):
-        pressureInput = '500'
+        pressureInput = '80'
         self.assertEquals(True, DSP.checkPressureFormat(pressureInput));
 
     def test202_503_ShouldReturnCheckPressureFail(self):
@@ -280,7 +280,7 @@ class dispatchTest(unittest.TestCase):
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_504_ShouldReturnCheckPressureFail(self):
-        pressureInput = '500.0'
+        pressureInput = '80.0'
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_505_ShouldReturnCheckPressureFail(self):
