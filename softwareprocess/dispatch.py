@@ -76,6 +76,8 @@ def checkObservationFormat(observation):
 
 
     # check if deg is a digit first
+    if(len(degString) > 2 or len(degString) == 0):
+        return False
     if(not(degString.isdigit())):
         return False
     if(int(degString) < 0 or int(degString) >= 90):
@@ -89,3 +91,45 @@ def checkObservationFormat(observation):
     #if (not(minString[::-1].find('.'))):
     #    return False
     return True
+
+def checkHeightFormat(height):
+    if(observation.count('d') != 1):
+        return False
+    posOfd = observation.find('d')
+    degString = observation[0: posOfd]
+    minString = observation[posOfd + 1: len(observation)]
+
+    if(minString.count('.') != 1):
+        return False
+    posOfPeriod = minString.find('.')
+    yInt = minString[0: posOfPeriod]
+    yDecimal = minString[posOfPeriod + 1 : len(minString)]
+    if(len(yDecimal) != 1):
+        return False
+    if(len(yInt) > 2 or len(yInt) == 0):
+        return False
+    if(not(yDecimal.isdigit())):
+        return False
+    if(not(yInt.isdigit())):
+        return False
+    if(int(yInt) > 59 or int(yInt) < 0):
+        return  False
+
+
+    # check if deg is a digit first
+    if(len(degString) > 2 or len(degString) == 0):
+        return False
+    if(not(degString.isdigit())):
+        return False
+    if(int(degString) < 0 or int(degString) >= 90):
+        return False
+    #if(not(is_(minString))):
+    #    return False
+    #if(not(isinstance(degString, int))):
+    #    return False
+    #if(not(isinstance(minString, float))):
+    #    return False
+    #if (not(minString[::-1].find('.'))):
+    #    return False
+    return True
+
