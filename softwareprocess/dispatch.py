@@ -58,11 +58,21 @@ def checkObservationFormat(observation):
     degString = observation[0: posOfd]
     minString = observation[posOfd + 1: len(observation)]
 
+    if(minString.count('.') != 1):
+        return False
+    posOfPeriod = minString.find('.')
+    yInt = minString[0: posOfPeriod]
+    yDecimal = minString[posOfPeriod + 1 : len(minString)]
+    if(len(yDecimal) != 1):
+        return False
+
+
+    # check if deg is a digit first
     if(not(degString.isdigit())):
         return False
-    if(int(degString) < 0 && int(degString) >= 90):
+    if(int(degString) < 0 and int(degString) >= 90):
         return False
-    if(not(is_number(minString))):
+    if(not(is_(minString))):
         return False
     if(not(isinstance(degString, int))):
         return False

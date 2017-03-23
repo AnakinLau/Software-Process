@@ -127,15 +127,50 @@ class dispatchTest(unittest.TestCase):
         self.assertEquals(correctReturnedDict['pressure'], parsedDict['pressure']);
         self.assertEquals(correctReturnedDict['horizon'], parsedDict['horizon']);
 
+    # Test checkObservationFormat
     def test202_201_ShouldReturnCheckObservationPass(self):
         observationInput = '30d1.5'
         self.assertEquals(True, DSP.checkObservationFormat(observationInput));
 
-    def test202_202_ShouldReturnCheckObservationPass(self):
-        observationInput = '30d1.5'
-        self.assertEquals(True, DSP.checkObservationFormat(observationInput));
+    def test202_202_ShouldReturnCheckObservationFail(self):
+        observationInput = '301.5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
 
+    def test202_203_ShouldReturnCheckObservationFail(self):
+        observationInput = '30dd1.5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
 
+    def test202_204_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d15'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_205_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d1..5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_206_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d100.5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_207_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d60.5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_208_ShouldReturnCheckObservationPass(self):
+        observationInput = '30d59.9'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_209_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d-0.5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_210_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d0.-5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_210_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d0.45'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
 
     def test202_001_DipShouldReturnZero(self):
         expectedNumber = 0
