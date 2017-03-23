@@ -1,3 +1,4 @@
+
 def dispatch(values=None):
 
     #Validate parm
@@ -131,3 +132,10 @@ def checkHorizonFormat(horizon):
             return False
     except ValueError:
         return False
+
+def getDip(dictInput):
+    if(dictInput['horizon'].lower() == 'natural'):
+        return float((-0.97 * math.sqrt(int(dictInput['height']))) / 60)
+    else :
+        return 0
+

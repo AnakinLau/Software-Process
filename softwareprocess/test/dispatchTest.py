@@ -298,33 +298,37 @@ class dispatchTest(unittest.TestCase):
     # Test checkHorizonFormat
     def test202_600_ShouldReturnCheckHorizonPass(self):
         horizonInput = 'artificial'
-        self.assertEquals(True, DSP.checkPressureFormat(horizonInput));
+        self.assertEquals(True, DSP.checkHorizonFormat(horizonInput));
 
     def test202_601_ShouldReturnCheckHorizonPass(self):
         horizonInput = 'ArtIficial'
-        self.assertEquals(True, DSP.checkPressureFormat(horizonInput));
+        self.assertEquals(True, DSP.checkHorizonFormat(horizonInput));
 
     def test202_602_ShouldReturnCheckHorizonPass(self):
         horizonInput = 'natural'
-        self.assertEquals(True, DSP.checkPressureFormat(horizonInput));
+        self.assertEquals(True, DSP.checkHorizonFormat(horizonInput));
 
     def test202_603_ShouldReturnCheckHorizonPass(self):
         horizonInput = 'nAtuRal'
-        self.assertEquals(True, DSP.checkPressureFormat(horizonInput));
+        self.assertEquals(True, DSP.checkHorizonFormat(horizonInput));
 
     def test202_604_ShouldReturnCheckHorizonFail(self):
         horizonInput = 'nAtuRal11'
-        self.assertEquals(False, DSP.checkPressureFormat(horizonInput));
+        self.assertEquals(False, DSP.checkHorizonFormat(horizonInput));
 
     def test202_605_ShouldReturnCheckHorizonFail(self):
         horizonInput = ''
-        self.assertEquals(False, DSP.checkPressureFormat(horizonInput));
+        self.assertEquals(False, DSP.checkHorizonFormat(horizonInput));
 
     def test202_606_ShouldReturnCheckHorizonFail(self):
         horizonInput = 'nAtuRal  '
-        self.assertEquals(False, DSP.checkPressureFormat(horizonInput));
+        self.assertEquals(False, DSP.checkHorizonFormat(horizonInput));
 
 
     def test202_001_DipShouldReturnZero(self):
         expectedNumber = 0
-        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'horizon': 'natural'}))
+        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'horizon': 'artificial'}))
+
+    def test202_002_DipShouldReturnNumber(self):
+        expectedNumber = float((-0.97 * 4 / 60))
+        self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '4', 'horizon': 'natural'}))
