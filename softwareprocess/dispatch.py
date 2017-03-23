@@ -123,5 +123,11 @@ def checkPressureFormat(pressure):
     except ValueError:
         return False
 
-def checkHorizonFormat(Horizon):
-    
+def checkHorizonFormat(horizon):
+    try:
+        if(horizon.lower() == 'natural' or horizon.lower() == 'artificial'):
+            return True
+        else:
+            return False
+    except ValueError:
+        return False
