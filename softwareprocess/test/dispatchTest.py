@@ -330,5 +330,5 @@ class dispatchTest(unittest.TestCase):
         self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'horizon': 'artificial'}))
 
     def test202_002_DipShouldReturnNumber(self):
-        expectedNumber = float((-0.97 * 4 / 60))
+        expectedNumber = float((-0.97 * 2 / 60))
         self.assertEquals(expectedNumber, DSP.getDip({'observation': '42d0.0',  'op': 'adjust', 'height': '4', 'horizon': 'natural'}))
