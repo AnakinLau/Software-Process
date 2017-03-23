@@ -71,8 +71,33 @@ class dispatchTest(unittest.TestCase):
         self.assertEquals(correctReturnedDict['pressure'], parsedDict['pressure']);
         self.assertEquals(correctReturnedDict['horizon'], parsedDict['horizon']);
 
+    def test202_101_ShouldReturnWithDefaultParamHaveHeightFail(self):
+        entryDict = {'observation': '42d0.0',  'op': 'adjust', 'height': '13'}
+        correctReturnedDict = {'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'temperature': '72'
+            , 'pressure': '1010', 'horizon' : 'natural'}
 
+        parsedDict = DSP.getDefaultOptionalValues(entryDict)
 
+        self.assertEquals(correctReturnedDict['observation'], parsedDict['observation']);
+        self.assertEquals(correctReturnedDict['op'], parsedDict['op']);
+        self.assertEquals(correctReturnedDict['height'], parsedDict['height']);
+        self.assertEquals(correctReturnedDict['temperature'], parsedDict['temperature']);
+        self.assertEquals(correctReturnedDict['pressure'], parsedDict['pressure']);
+        self.assertEquals(correctReturnedDict['horizon'], parsedDict['horizon']);
+
+    def test202_101_ShouldReturnWithDefaultParamHaveTemperatureFail(self):
+        entryDict = {'observation': '42d0.0',  'op': 'adjust', 'temperature': '13'}
+        correctReturnedDict = {'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'temperature': '72'
+            , 'pressure': '1010', 'horizon' : 'natural'}
+
+        parsedDict = DSP.getDefaultOptionalValues(entryDict)
+
+        self.assertEquals(correctReturnedDict['observation'], parsedDict['observation']);
+        self.assertEquals(correctReturnedDict['op'], parsedDict['op']);
+        self.assertEquals(correctReturnedDict['height'], parsedDict['height']);
+        self.assertEquals(correctReturnedDict['temperature'], parsedDict['temperature']);
+        self.assertEquals(correctReturnedDict['pressure'], parsedDict['pressure']);
+        self.assertEquals(correctReturnedDict['horizon'], parsedDict['horizon']);
 
 
 
