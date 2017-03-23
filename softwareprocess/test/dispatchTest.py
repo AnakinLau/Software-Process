@@ -264,15 +264,15 @@ class dispatchTest(unittest.TestCase):
 
 # Test checkPressureFormat
     def test202_500_ShouldReturnCheckPressurePass(self):
-        pressureInput = '-0'
+        pressureInput = '100'
         self.assertEquals(True, DSP.checkPressureFormat(pressureInput));
 
     def test202_501_ShouldReturnCheckPressurePass(self):
-        pressureInput = '120'
+        pressureInput = '1100'
         self.assertEquals(True, DSP.checkPressureFormat(pressureInput));
 
     def test202_502_ShouldReturnCheckPressurePass(self):
-        pressureInput = '80'
+        pressureInput = '800'
         self.assertEquals(True, DSP.checkPressureFormat(pressureInput));
 
     def test202_503_ShouldReturnCheckPressureFail(self):
@@ -280,20 +280,49 @@ class dispatchTest(unittest.TestCase):
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_504_ShouldReturnCheckPressureFail(self):
-        pressureInput = '80.0'
+        pressureInput = '101.0'
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_505_ShouldReturnCheckPressureFail(self):
-        pressureInput = '121'
+        pressureInput = '99'
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_506_ShouldReturnCheckPressureFail(self):
-        pressureInput = '-21'
+        pressureInput = '1101'
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
 
     def test202_507_ShouldReturnCheckPressureFail(self):
         pressureInput = 'b'
         self.assertEquals(False, DSP.checkPressureFormat(pressureInput));
+
+    # Test checkHorizonFormat
+    def test202_600_ShouldReturnCheckHorizonPass(self):
+        horizonInput = 'artificial'
+        self.assertEquals(True, DSP.checkPressureFormat(horizonInput));
+
+    def test202_601_ShouldReturnCheckHorizonPass(self):
+        horizonInput = 'ArtIficial'
+        self.assertEquals(True, DSP.checkPressureFormat(horizonInput));
+
+    def test202_602_ShouldReturnCheckHorizonPass(self):
+        horizonInput = 'natural'
+        self.assertEquals(True, DSP.checkPressureFormat(horizonInput));
+
+    def test202_603_ShouldReturnCheckHorizonPass(self):
+        horizonInput = 'nAtuRal'
+        self.assertEquals(True, DSP.checkPressureFormat(horizonInput));
+
+    def test202_604_ShouldReturnCheckHorizonFail(self):
+        horizonInput = 'nAtuRal11'
+        self.assertEquals(False, DSP.checkPressureFormat(horizonInput));
+
+    def test202_605_ShouldReturnCheckHorizonFail(self):
+        horizonInput = ''
+        self.assertEquals(False, DSP.checkPressureFormat(horizonInput));
+
+    def test202_606_ShouldReturnCheckHorizonFail(self):
+        horizonInput = 'nAtuRal  '
+        self.assertEquals(False, DSP.checkPressureFormat(horizonInput));
 
 
     def test202_001_DipShouldReturnZero(self):
