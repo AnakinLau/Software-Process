@@ -50,3 +50,18 @@ def getDefaultOptionalValues(values):
     if(not('horizon' in values)):
         values['horizon'] = 'natural'
     return values
+
+def checkObservationFormat(observation):
+    if(observation.count('d') != 1):
+        return False
+    posOfd = observation.find('d')
+    degString = observation[0: posOfd]
+    minString = observation[posOfd + 1: len(observation)]
+
+    if(not(isinstance(degString, int))):
+        return False
+    if(not(isinstance(minString, float))):
+        return False
+    if (not(minString[::-1].find('.'))):
+        return False
+    return True
