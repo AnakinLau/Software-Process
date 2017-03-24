@@ -355,15 +355,15 @@ class dispatchTest(unittest.TestCase):
 
     def test203_100_getAltitudeShouldReturnAltitude(self):
         expectedAltitude = '9d54.7'
-        self.assertEquals(expectedAltitude, DSP.getRefraction({'observation': '10d0.0',  'op': 'adjust',
+        self.assertEquals(expectedAltitude, DSP.getAltitude({'observation': '10d0.0',  'op': 'adjust',
                                                       'height': '6', 'horizon': 'artificial',
                                                       'temperature': '72', 'pressure': '1010'}))
 
     def test203_100_getAltitudeShouldReturnAltitude(self):
-        expectedAltitude = '9d54.7'
-        self.assertEquals(expectedAltitude, DSP.getRefraction({'observation': '10d0.0',  'op': 'adjust',
-                                                      'height': '6', 'horizon': 'artificial',
-                                                      'temperature': '72', 'pressure': '1010'}))
+        expectedAltitude = '45d11.9'
+        self.assertEquals(expectedAltitude, DSP.getAltitude({'observation': '45d15.2',  'op': 'adjust',
+                                                      'height': '6', 'horizon': 'natural',
+                                                      'temperature': '71', 'pressure': '1010'}))
 
 
 
