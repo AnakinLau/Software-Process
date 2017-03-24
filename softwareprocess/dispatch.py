@@ -190,7 +190,7 @@ def convertNumToDegMinString(numInput):
         decimalNum = float((numInput * -1) % 1)
     deg = 0
     mins = round((decimalNum * 60),1)
-    leftOver = float(min / 60)
+    leftOver = mins / 60
     if(leftOver >= 1):
         deg = int(leftOver)
         mins = mins - (60 * leftOver)
