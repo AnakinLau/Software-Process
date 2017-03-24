@@ -177,7 +177,7 @@ def getObservationMinToFloat(observationInput):
     return float(minString)
 
 def convertMinToNumber(minNum):
-    return minNum/60
+    return float(minNum/60)
 
 def convertDegMinToNumber(degInput, minInput):
     return degInput + convertMinToNumber(minInput)
