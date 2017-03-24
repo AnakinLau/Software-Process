@@ -16,16 +16,22 @@ def dispatch(values=None):
             values['error'] = 'mandatory information is missing'
             del values['op']
             return values
-        # All default optional values
-        if(not('height' in values)):
-            values['height'] = '0'
-        if(not('temperature' in values)):
-            values['temperature'] = '72'
-        if(not('pressure' in values)):
-            values['pressure'] = '1010'
-        if(not('horizon' in values)):
-            values['horizon'] = 'natural'
-
+        values = getDefaultOptionalValues(values)
+        if(checkObservationFormat(values['observation']) == False):
+            values['error'] =  'observation is invalid'
+            return values
+        if(checkHeightFormat(values['height']) == False):
+            values['error'] =  'height is invalid'
+            return values
+        if(checkPressureFormat(values['pressure']) == False):
+            values['error'] =  'pressure is invalid'
+            return values
+        if(checkTemperatureFormat(values['temperature']) == False):
+            values['error'] =  'temperature is invalid'
+            return values
+        if(checkHorizonFormat(values['horizon']) == False):
+            values['error'] =  'horizon is invalid'
+            return values
 
 
         return values    #<-------------- replace this with your implementation
