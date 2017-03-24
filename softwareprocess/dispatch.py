@@ -184,6 +184,7 @@ def convertDegMinToNumber(degInput, minInput):
     return degInput + convertMinToNumber(minInput)
 
 def convertNumToDegMinString(numInput):
+    print ("numInput= {0}".format(numInput))
     if numInput >= 0:
         decimalNum = float(numInput % 1)
     else:
