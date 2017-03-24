@@ -102,6 +102,14 @@ class dispatchTest(unittest.TestCase):
                                                         'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
                                                         'temperature': 'a'}))
 
+    def test201_017_ShouldReturnAltitude(self):
+        expectedString = {'observation': '42d0.0', 'height': '9', 'pressure': '1010',
+                          'horizon': 'natural', 'op': 'adjust', 'temperature': '72'}
+        self.assertEquals(expectedString, DSP.dispatch({'op':'adjust', 'observation':'15d04.9', 'height':'6.0',
+                                                        'temperature':'72','pressure':'1010'}))
+
+#{'op':'adjust', 'observation':'015d04.9', 'height':'6.0', 'temperature':'72','pressure':'1010', 'horizon':'artificial'}
+
     # Should change the string to have added default params if not already there
     def test202_100_ShouldReturnWithDefaultParam(self):
         entryDict = {'observation': '42d0.0',  'op': 'adjust'}
