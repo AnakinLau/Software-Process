@@ -70,6 +70,38 @@ class dispatchTest(unittest.TestCase):
                                                         'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
                                                         'temperature': '71'}))
 
+    def test201_013_ShouldReturnAltitude(self):
+        expectedString = {'observation': '101d15.2', 'height': 'a', 'pressure': '1010',
+                          'horizon': 'natural', 'op': 'adjust', 'temperature': '71',
+                          'error':'height is invalid'}
+        self.assertEquals(expectedString, DSP.dispatch({'observation': '101d15.2', 'height': 'a',
+                                                        'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                                                        'temperature': '71'}))
+
+    def test201_014_ShouldReturnAltitude(self):
+        expectedString = {'observation': '101d15.2', 'height': '9', 'pressure': '1010',
+                          'horizon': 'natura', 'op': 'adjust', 'temperature': '71',
+                          'error':'horizon is invalid'}
+        self.assertEquals(expectedString, DSP.dispatch({'observation': '101d15.2', 'height': '9',
+                                                        'pressure': '1010', 'horizon': 'natura', 'op': 'adjust',
+                                                        'temperature': '71'}))
+
+    def test201_015_ShouldReturnAltitude(self):
+        expectedString = {'observation': '101d15.2', 'height': '9', 'pressure': 'a',
+                          'horizon': 'natural', 'op': 'adjust', 'temperature': '71',
+                          'error':'pressure is invalid'}
+        self.assertEquals(expectedString, DSP.dispatch({'observation': '101d15.2', 'height': '9',
+                                                        'pressure': 'a', 'horizon': 'natural', 'op': 'adjust',
+                                                        'temperature': '71'}))
+
+    def test201_016_ShouldReturnAltitude(self):
+        expectedString = {'observation': '101d15.2', 'height': '9', 'pressure': '1010',
+                          'horizon': 'natural', 'op': 'adjust', 'temperature': 'a',
+                          'error':'temperature is invalid'}
+        self.assertEquals(expectedString, DSP.dispatch({'observation': '101d15.2', 'height': '9',
+                                                        'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                                                        'temperature': 'a'}))
+
     # Should change the string to have added default params if not already there
     def test202_100_ShouldReturnWithDefaultParam(self):
         entryDict = {'observation': '42d0.0',  'op': 'adjust'}
