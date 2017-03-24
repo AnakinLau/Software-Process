@@ -163,6 +163,7 @@ def getAltitude(dictInput):
     degInt = getObservationDegToInt(dictInput['observation'])
     minFloat = getObservationMinToFloat(dictInput['observation'])
     degMinNum = convertDegMinToNumber(degInt, minFloat)
+    degMinNum = degMinNum + dip + refraction
     return convertNumToDegMinString(degMinNum)
 
 # Helper methods getting degrees and minutes
@@ -183,7 +184,7 @@ def convertDegMinToNumber(degInput, minInput):
     return degInput + convertMinToNumber(minInput)
 
 def convertNumToDegMinString(numInput):
-    if(numInput >= 0):
+    if numInput >= 0:
         decimalNum = float(numInput % 1)
     else:
         decimalNum = float((numInput * -1) % 1)

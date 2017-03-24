@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d0e6ed8a-7ecb-4d63-9a84-e59a13b56452" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/dispatch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/test/dispatchTest.py" afterPath="$PROJECT_DIR$/softwareprocess/test/dispatchTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,7 +43,7 @@
               <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatchTest.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="839">
-                    <caret line="361" column="4" lean-forward="false" selection-start-line="361" selection-start-column="4" selection-end-line="361" selection-end-column="4" />
+                    <caret line="361" column="19" lean-forward="false" selection-start-line="361" selection-start-column="19" selection-end-line="361" selection-end-column="19" />
                     <folding>
                       <element signature="e#0#15#0" expanded="true" />
                     </folding>
@@ -91,8 +90,8 @@
       <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="191" column="16" lean-forward="true" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -144,8 +143,8 @@
         <option value="$PROJECT_DIR$/softwareprocess/convertString2Dictionary.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/SampleTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/Sample.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/dispatchTest.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
       </list>
     </option>
   </component>
@@ -476,24 +475,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 01h 20m 47s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 01h 28m 50s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 01h 33m 45s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 01h 35m 25s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 01h 38m 33s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 13h 51m 17s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.23 at 14h 15m 40s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -505,6 +486,24 @@
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.23 at 14h 24m 37s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 19h 30m 51s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 19h 31m 17s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 19h 32m 56s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 19h 34m 04s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 19h 34m 29s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_SampleTest - 2017.03.23 at 19h 34m 15s.xml">
+      <configuration name="Unittests in SampleTest" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -537,7 +536,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="Assignment 3 is completed, along with a testing file, and custom tests with TDD" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/softwareprocess/dispatch.py</url>
+          <line>159</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="f1" language="Python" />
@@ -687,21 +694,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatchTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="839">
-          <caret line="361" column="4" lean-forward="false" selection-start-line="361" selection-start-column="4" selection-end-line="361" selection-end-column="4" />
+          <caret line="361" column="19" lean-forward="false" selection-start-line="361" selection-start-column="19" selection-end-line="361" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="191" column="16" lean-forward="true" selection-start-line="191" selection-start-column="16" selection-end-line="191" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
