@@ -32,9 +32,9 @@ def dispatch(values=None):
         if(checkHorizonFormat(values['horizon']) == False):
             values['error'] =  'horizon is invalid'
             return values
-
-
+        values['altitude'] = getAltitude(values)
         return values    #<-------------- replace this with your implementation
+
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
