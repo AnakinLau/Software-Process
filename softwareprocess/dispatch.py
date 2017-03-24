@@ -1,3 +1,13 @@
+"""
+    Created on Mar 21, 2017
+
+    @author: Wan Anakin Lau
+
+    Purpose of this program is to return a corrected altitude given a set
+    of information based on temperature, altitude, pressure, height, and horizon.
+    Gives back error when unexpected input is put through.
+
+"""
 import math
 def dispatch(values=None):
 
@@ -33,7 +43,7 @@ def dispatch(values=None):
             values['error'] =  'horizon is invalid'
             return values
         values['altitude'] = getAltitude(values)
-        return values    #<-------------- replace this with your implementation
+        return values
 
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
@@ -58,6 +68,7 @@ def getDefaultOptionalValues(values):
         values['horizon'] = 'natural'
     return values
 
+
 def checkObservationFormat(observation):
     if(observation.count('d') != 1):
         return False
@@ -81,7 +92,6 @@ def checkObservationFormat(observation):
     if(int(yInt) > 59 or int(yInt) < 0):
         return  False
 
-
     # check if deg is a digit first
     if(len(degString) > 2 or len(degString) == 0):
         return False
@@ -89,15 +99,8 @@ def checkObservationFormat(observation):
         return False
     if(int(degString) < 0 or int(degString) >= 90):
         return False
-    #if(not(is_(minString))):
-    #    return False
-    #if(not(isinstance(degString, int))):
-    #    return False
-    #if(not(isinstance(minString, float))):
-    #    return False
-    #if (not(minString[::-1].find('.'))):
-    #    return False
     return True
+
 
 def checkHeightFormat(height):
     try:
@@ -107,6 +110,7 @@ def checkHeightFormat(height):
             return False
     except ValueError:
         return False
+
 
 def checkTemperatureFormat(temperature):
     try:
@@ -119,6 +123,7 @@ def checkTemperatureFormat(temperature):
     except ValueError:
         return False
 
+
 def checkPressureFormat(pressure):
     try:
         if(float(pressure) >= 100 and float(pressure) <= 1100
@@ -130,6 +135,7 @@ def checkPressureFormat(pressure):
     except ValueError:
         return False
 
+
 def checkHorizonFormat(horizon):
     try:
         if(horizon.lower() == 'natural' or horizon.lower() == 'artificial'):
@@ -139,21 +145,17 @@ def checkHorizonFormat(horizon):
     except ValueError:
         return False
 
+
 def getDip(dictInput):
     if(dictInput['horizon'].lower() == 'natural'):
         return float((-0.97 * math.sqrt(int(dictInput['height']))) / 60)
     else :
         return 0
 
+
 def getRefraction(dictInput):
     refractionP1 = (-0.00452 * int(dictInput['pressure']))
     refractionP2 = (273 + ((int(dictInput['temperature']) - 32) / 1.8))
-    #posOfd = dictInput['observation'].find('d')
-    #degString = dictInput['observation'][0: posOfd]
-    #minString = dictInput['observation'][posOfd + 1: len(dictInput['observation'])]
-    #degToInt = int(degString)
-    #print("degString= {0}".format(degString))
-    #minToFloat = float(minString)
     degToInt = getObservationDegToInt(dictInput['observation'])
     minToFloat = getObservationMinToFloat(dictInput['observation'])
     print("minToFloat= {0}".format(minToFloat))
@@ -162,6 +164,7 @@ def getRefraction(dictInput):
     print("refractionP1= {0}, refractionP2= {1}, "
           "refractionP3= {2}".format(refractionP1, refractionP2, refractionP3))
     return refractionP1 / refractionP2 / refractionP3
+
 
 def getAltitude(dictInput):
     dip = getDip(dictInput)
@@ -173,22 +176,27 @@ def getAltitude(dictInput):
     print("degMinNum= {0}".format(degMinNum))
     return convertNumToDegMinString(degMinNum)
 
+
 # Helper methods getting degrees and minutes
 def getObservationDegToInt(observationInput):
     posOfd = observationInput.find('d')
     degString = observationInput[0: posOfd]
     return int(degString)
 
+
 def getObservationMinToFloat(observationInput):
     posOfd = observationInput.find('d')
     minString = observationInput[posOfd + 1: len(observationInput)]
     return float(minString)
 
+
 def convertMinToNumber(minNum):
     return float(minNum/60)
 
+
 def convertDegMinToNumber(degInput, minInput):
     return degInput + convertMinToNumber(minInput)
+
 
 def convertNumToDegMinString(numInput):
     print ("numInput= {0}".format(numInput))
@@ -205,7 +213,6 @@ def convertNumToDegMinString(numInput):
         mins = mins - (60 * leftOver)
     if(numInput < 0):
         deg = -1 * deg
-    #deg = deg + round(numInput, 0)
     deg = deg + int(numInput)
 
     return str(deg) + 'd' + str(mins)
