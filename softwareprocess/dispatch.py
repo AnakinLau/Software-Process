@@ -148,7 +148,7 @@ def checkHorizonFormat(horizon):
 
 def getDip(dictInput):
     if(dictInput['horizon'].lower() == 'natural'):
-        return float((-0.97 * math.sqrt(int(dictInput['height']))) / 60)
+        return float((-0.97 * math.sqrt(float(dictInput['height']))) / 60)
     else :
         return 0
 
