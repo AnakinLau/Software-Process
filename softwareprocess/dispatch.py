@@ -152,7 +152,7 @@ def getRefraction(dictInput):
     minToFloat = getObservationMinToFloat(dictInput['observation'])
     print("minToFloat= {0}".format(minToFloat))
     refractionP3 = (math.tan(math.radians(degToInt +
-                                          (convertDegMinToNumber(minToFloat)))))
+                                          (convertMinToNumber(minToFloat)))))
     print("refractionP1= {0}, refractionP2= {1}, "
           "refractionP3= {2}".format(refractionP1, refractionP2, refractionP3))
     return refractionP1 / refractionP2 / refractionP3
@@ -160,6 +160,10 @@ def getRefraction(dictInput):
 def getAltitude(dictInput):
     dip = getDip(dictInput)
     refraction = getRefraction(dictInput)
+    degInt = getObservationDegToInt(dictInput['observation'])
+    minFloat = getObservationMinToFloat(dictInput['observation'])
+    degMinNum = convertDegMinToNumber(degInt, minFloat)
+    return convertNumToDegMinString(degMinNum)
 
 # Helper methods getting degrees and minutes
 def getObservationDegToInt(observationInput):
@@ -177,3 +181,20 @@ def convertMinToNumber(minNum):
 
 def convertDegMinToNumber(degInput, minInput):
     return degInput + convertMinToNumber(minInput)
+
+def convertNumToDegMinString(numInput):
+    if(numInput >= 0):
+        decimalNum = float(numInput % 1)
+    else:
+        decimalNum = float((numInput * -1) % 1)
+    deg = 0
+    mins = round((decimalNum * 60),1)
+    leftOver = min / 60
+    if(leftOver >= 1):
+        deg = int(leftOver)
+        mins = mins - (60 * leftOver)
+    if(numInput < 0):
+        deg = -1 * deg
+    deg = deg + round(numInput, 0)
+
+    return str(deg) + 'd' + str(mins)

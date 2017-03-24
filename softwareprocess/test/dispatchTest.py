@@ -353,9 +353,17 @@ class dispatchTest(unittest.TestCase):
                                                       'height': '6', 'horizon': 'natural',
                                                       'temperature': '71', 'pressure': '1010'}), 5)
 
+    def test203_100_getAltitudeShouldReturnAltitude(self):
+        expectedAltitude = '9d54.7'
+        self.assertEquals(expectedAltitude, DSP.getRefraction({'observation': '10d0.0',  'op': 'adjust',
+                                                      'height': '6', 'horizon': 'artificial',
+                                                      'temperature': '72', 'pressure': '1010'}))
 
-
-
+    def test203_100_getAltitudeShouldReturnAltitude(self):
+        expectedAltitude = '9d54.7'
+        self.assertEquals(expectedAltitude, DSP.getRefraction({'observation': '10d0.0',  'op': 'adjust',
+                                                      'height': '6', 'horizon': 'artificial',
+                                                      'temperature': '72', 'pressure': '1010'}))
 
 
 
