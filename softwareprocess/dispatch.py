@@ -199,6 +199,7 @@ def convertNumToDegMinString(numInput):
         mins = mins - (60 * leftOver)
     if(numInput < 0):
         deg = -1 * deg
-    deg = deg + round(numInput, 0)
+    #deg = deg + round(numInput, 0)
+    deg = deg + int(numInput)
 
     return str(deg) + 'd' + str(mins)
