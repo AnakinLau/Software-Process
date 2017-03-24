@@ -194,7 +194,7 @@ def convertNumToDegMinString(numInput):
     mins = round((decimalNum * 60),1)
     leftOver = mins / 60
     if(leftOver >= 1):
-        print ("leftOver {0} is >= 1".format(leftOver))
+        print ("leftOver {0} is >= 1")
         deg = int(leftOver)
         mins = mins - (60 * leftOver)
     if(numInput < 0):
