@@ -26,7 +26,7 @@ def dispatch(values=None):
             values['error'] = 'mandatory information is missing'
             del values['op']
             return values
-        values = getDefaultOptionalValues(values)
+        values = getDefaultOptionalValues(values, 'adjust')
         if(checkObservationFormat(values['observation']) == False):
             values['error'] =  'observation is invalid'
             return values
@@ -60,17 +60,27 @@ def dispatch(values=None):
         del values['op']
         return values
 
-def getDefaultOptionalValues(values):
-    # All default optional values
-    if(not('height' in values)):
-        values['height'] = '0'
-    if(not('temperature' in values)):
-        values['temperature'] = '72'
-    if(not('pressure' in values)):
-        values['pressure'] = '1010'
-    if(not('horizon' in values)):
-        values['horizon'] = 'natural'
+def getDefaultOptionalValues(values, operation):
+    if(operation == 'adjust'):
+        # All default optional values
+        if(not('height' in values)):
+            values['height'] = '0'
+        if(not('temperature' in values)):
+            values['temperature'] = '72'
+        if(not('pressure' in values)):
+            values['pressure'] = '1010'
+        if(not('horizon' in values)):
+            values['horizon'] = 'natural'
+    elif(operation == 'predict'):
+        if(not('date' in values)):
+            values['date'] = '2001-01-01'
+        if(not('time' in values)):
+            values['time'] = '00:00:00'
+    else:
+        values['getDefaultOptionalValuesError'] = \
+            'operation given is not one included in the function'
     return values
+
 
 
 def checkObservationFormat(observation):
