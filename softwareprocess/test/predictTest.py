@@ -38,7 +38,7 @@ class predictTest(unittest.TestCase):
         correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
             'date': '2001-01-01'}
 
-        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'adjust')
+        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
 
         self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
         self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
