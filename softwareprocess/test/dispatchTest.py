@@ -2,24 +2,8 @@ import unittest
 import softwareprocess.dispatch as DSP
 import math
 
+
 class dispatchTest(unittest.TestCase):
-    # -----------------------------------------------------------------------
-    # ---- Acceptance Tests
-    # 100 constructor
-    #    Desired level of confidence:    boundary value analysis
-    #    Input-output Analysis
-    #        inputs:      n ->    integer .GE. 2 and .LT. 30  mandatory, unvalidated
-    #        outputs:    instance of TCurve
-    #    Happy path analysis:
-    #        n:      nominal value    n=4
-    #                low bound        n=2
-    #                high bound       n=29
-    #    Sad path analysis:
-    #        n:      non-int n          n="abc"
-    #                out-of-bounds n    n=1; n=30
-    #                missing n
-    #
-    # Sad path
 
     def test100_010_ShouldReturnParameterIsMissing(self):
         expectedString = {'error' : 'parameter is missing'}

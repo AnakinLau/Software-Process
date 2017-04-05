@@ -46,7 +46,11 @@ def dispatch(values=None):
         return values
 
     elif(values['op'] == 'predict'):
-        return values    #This calculation is stubbed out
+        if(not('body' in values)):
+            values['error'] = 'mandatory information is missing'
+            del values['op']
+            return values
+        return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
