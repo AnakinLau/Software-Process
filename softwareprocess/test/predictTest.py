@@ -31,3 +31,18 @@ class predictTest(unittest.TestCase):
     def test200_010_ShouldReturnMandatoryInfoIsMissing(self):
         expectedString = {'error':'mandatory information is missing'}
         self.assertEquals(expectedString, DSP.dispatch({'op': 'predict'}))
+
+# Should change the string to have added default params if not already there
+    def test202_100_ShouldReturnWithDefaultParam(self):
+        entryDict = {'body': 'Betelgeuse',  'op': 'predict'}
+        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
+            'date': '2001-01-01', 'horizon' : 'natural'}
+
+        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'adjust')
+
+        self.assertEquals(correctReturnedDict['observation'], parsedDict['observation']);
+        self.assertEquals(correctReturnedDict['op'], parsedDict['op']);
+        self.assertEquals(correctReturnedDict['height'], parsedDict['height']);
+        self.assertEquals(correctReturnedDict['temperature'], parsedDict['temperature']);
+        self.assertEquals(correctReturnedDict['pressure'], parsedDict['pressure']);
+        self.assertEquals(correctReturnedDict['horizon'], parsedDict['horizon']);

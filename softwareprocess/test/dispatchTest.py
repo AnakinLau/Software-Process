@@ -100,7 +100,7 @@ class dispatchTest(unittest.TestCase):
         correctReturnedDict = {'observation': '42d0.0',  'op': 'adjust', 'height': '0', 'temperature': '72'
             , 'pressure': '1010', 'horizon' : 'natural'}
 
-        parsedDict = DSP.getDefaultOptionalValues(entryDict)
+        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'adjust')
 
         self.assertEquals(correctReturnedDict['observation'], parsedDict['observation']);
         self.assertEquals(correctReturnedDict['op'], parsedDict['op']);
