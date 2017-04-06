@@ -213,6 +213,7 @@ def getAltitude(dictInput):
 def getObservationDegToInt(observationInput):
     posOfd = observationInput.find('d')
     degString = observationInput[0: posOfd]
+    print('degString= {0}'.format(degString))
     return int(degString)
 
 
