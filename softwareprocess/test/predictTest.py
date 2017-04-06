@@ -104,9 +104,9 @@ class predictTest(unittest.TestCase):
         dateInput = '2002-01-01'
         self.assertEquals(True, DSP.checkDateFormat(dateInput));
 
-    def test202_213_ShouldReturnCheckDateFail(self):
-        dateInput = '2001-03-04'
-        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+    def test202_213_ShouldReturnCheckDateTrue(self):
+        dateInput = '2001-01-01'
+        self.assertEquals(True, DSP.checkDateFormat(dateInput));
 
     def test202_214_ShouldReturnCheckDateFail(self):
         dateInput = '2002-14-04'
@@ -118,4 +118,16 @@ class predictTest(unittest.TestCase):
 
     def test202_216_ShouldReturnCheckDateFail(self):
         dateInput = '2002-02-29'
+        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+
+    def test202_217_ShouldReturnCheckDateFail(self):
+        dateInput = '2001-00-00'
+        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+
+    def test202_218_ShouldReturnCheckDatePass(self):
+        dateInput = '2001-01-01'
+        self.assertEquals(True, DSP.checkDateFormat(dateInput));
+
+    def test202_219_ShouldReturnCheckDateFail(self):
+        dateInput = '2000-12-31'
         self.assertEquals(False, DSP.checkDateFormat(dateInput));
