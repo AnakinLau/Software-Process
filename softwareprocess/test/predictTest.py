@@ -84,17 +84,9 @@ class predictTest(unittest.TestCase):
         self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
 
     def test202_205_ShouldReturnCheckBodyPass(self):
-        bodyInput = 'kochab'
+        bodyInput = 'Kaus Aust.'
         self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
 
-    def test202_203_ShouldReturnCheckObservationFail(self):
-        observationInput = '30dd1.5'
-        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
-
-    def test202_204_ShouldReturnCheckObservationFail(self):
-        observationInput = '30d15'
-        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
-
-    def test202_205_ShouldReturnCheckObservationFail(self):
-        observationInput = '30d1..5'
-        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+    def test202_206_ShouldReturnCheckBodyPass(self):
+        bodyInput = 'kAus aUSt.'
+        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
