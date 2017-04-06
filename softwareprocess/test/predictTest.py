@@ -67,27 +67,27 @@ class predictTest(unittest.TestCase):
         self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
         self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
 
-    def test202_101_ShouldReturnWithDefaultParamFailHaveTime(self):
-        entryDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '70:05:01'}
-        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
-            'date': '2001-01-01'}
+    #def test202_101_ShouldReturnWithDefaultParamFailHaveTime(self):
+    #    entryDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '70:05:01'}
+    #    correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
+    #        'date': '2001-01-01'}
+#
+    #    parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
+#
+    #    self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
+    #    self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
+    #    self.assertEquals(correctReturnedDict['date'], par#sedDict['date']);
 
-        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
-
-        self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
-        self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
-        self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
-
-    def test202_102_ShouldReturnWithDefaultParamFailHaveDate(self):
-        entryDict = {'body': 'Betelgeuse',  'op': 'predict', 'date': '2017-12-10'}
-        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
-            'date': '2001-01-01'}
-
-        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
-
-        self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
-        self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
-        self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
+    #def test202_102_ShouldReturnWithDefaultParamFailHaveDate(self):
+    #    entryDict = {'body': 'Betelgeuse',  'op': 'predict', 'date': '2017-12-10'}
+    #    correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
+    #        'date': '2001-01-01'}
+#
+    #    parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
+#
+    #    self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
+    #    self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
+    #    self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
 
 # Test checkBodyFormat
     def test202_201_ShouldReturnCheckBodyPass(self):
@@ -181,3 +181,10 @@ class predictTest(unittest.TestCase):
     def test202_236_ShouldReturnCheckTimeFail(self):
         timeInput = '25:02:63'
         self.assertEquals(False, DSP.checkTimeFormat(timeInput));
+
+# Testing Calculations
+    def test202_301_GetAdjustedGHAPass(self):
+        timeInput = '22:02:23'
+        dateInput = '2002-02-02'
+        expectedCumProg = '-3d34.8'
+        self.assertEquals(False, DSP.getAdjustedGHA(dateInput, timeInput));

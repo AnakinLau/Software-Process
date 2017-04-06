@@ -63,6 +63,10 @@ def dispatch(values=None):
         if(checkTimeFormat(values['time']) == False):
             values['error'] = 'invalid time'
             return values
+        # Greenwich Hour Angle for Aries
+        GHAA = {'date': '2001-01-01', 'time': '00:00:00',
+                'deg': '100d42.6'}
+        adjustedGHA = getAdjustedGHA(values['date'], values['time'])
 
         return values
     elif(values['op'] == 'correct'):
@@ -225,6 +229,9 @@ def convertMinToNumber(minNum):
 def convertDegMinToNumber(degInput, minInput):
     return degInput + convertMinToNumber(minInput)
 
+def convertDegMinStrToNumber(degMinStr):
+    return convertDegMinToNumber(getObservationDegToInt(degMinStr),
+                          getObservationMinToFloat(degMinStr))
 
 def convertNumToDegMinString(numInput):
     print ("numInput= {0}".format(numInput))
@@ -337,3 +344,20 @@ def checkTimeFormat(timeInput):
         return True
     except ValueError:
         return False
+
+def getAdjustedGHA(dateInput, timeInput):
+    starDateTimeString = dateInput + ' ' + timeInput
+    starDateTimeObj = datetime.datetime.strptime(starDateTimeString,
+                                                 '%Y-%m-%d %H:%M:%S')
+    GHAADateTimeObj = datetime.datetime.strptime('2001-01-01 00:00:00',
+                                                 '%Y-%m-%d %H:%M:%S')
+    cumProg = 0
+
+
+    # Get Difference in years
+    if(starDateTimeObj.year > GHAADateTimeObj.year):
+        yearDiff = starDateTimeObj.year - GHAADateTimeObj.year
+        cumProg = convertNumToDegMinString(yearDiff *
+                                           convertDegMinStrToNumber(
+                                               '-0d14.31667'))
+    return cumProg # FOR NOW~
