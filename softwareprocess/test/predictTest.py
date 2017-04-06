@@ -33,8 +33,9 @@ class predictTest(unittest.TestCase):
         self.assertEquals(expectedString, DSP.dispatch({'op': 'predict'}))
 
     def test200_011_ShouldReturnStarNotInCatalog(self):
-        expectedString = {'error':'star not in catalog'}
-        self.assertEquals(expectedString, DSP.dispatch({'op': 'predict', 'body': 'mars'}))
+        expectedString = {'error': 'star not in catalog'}
+        self.assertEquals(expectedString['error'],
+                          DSP.dispatch({'op': 'predict', 'body': 'mars'})['error'])
 
 # Should change the string to have added default params if not already there
     def test202_100_ShouldReturnWithDefaultParam(self):

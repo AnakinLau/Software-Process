@@ -9,6 +9,7 @@
 
 """
 import math
+import datetime
 def dispatch(values=None):
 
     #Validate parm
@@ -20,7 +21,8 @@ def dispatch(values=None):
         values['error'] = 'no op  is specified'
         return values
 
-    #Perform designated function
+    # Perform designated function
+    # adjust operation--------->
     if(values['op'] == 'adjust'):
         if(not('observation' in values)):
             values['error'] = 'mandatory information is missing'
@@ -45,6 +47,7 @@ def dispatch(values=None):
         values['altitude'] = getAltitude(values)
         return values
 
+    # Predict operations------>
     elif(values['op'] == 'predict'):
         if(not('body' in values)):
             values['error'] = 'mandatory information is missing'
@@ -53,6 +56,9 @@ def dispatch(values=None):
         values = getDefaultOptionalValues(values, 'predict')
         if(checkBodyFormat(values['body']) == False):
             values['error'] = 'star not in catalog'
+            return values
+        if(checkDateFormat(values['date']) == False):
+            values['error'] = 'invalid date'
             return values
 
         return values
@@ -310,3 +316,14 @@ def checkBodyFormat(body):
         return False
     else:
         return True
+
+
+def checkDateFormat(date):
+    try:
+        dateObj = datetime.strptime('%Y-%m-%d')
+        if(dateObj.year > 2000):
+            return True
+        else:
+            return False
+    except ValueError:
+        return False
