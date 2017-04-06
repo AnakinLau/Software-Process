@@ -228,6 +228,7 @@ def convertMinToNumber(minNum):
 
 
 def convertDegMinToNumber(degInput, minInput):
+    print('degInput= {0}'.format(degInput))
     return degInput + convertMinToNumber(minInput)
 
 def convertDegMinStrToNumber(degMinStr):
