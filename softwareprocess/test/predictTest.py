@@ -131,3 +131,7 @@ class predictTest(unittest.TestCase):
     def test202_219_ShouldReturnCheckDateFail(self):
         dateInput = '2000-12-31'
         self.assertEquals(False, DSP.checkDateFormat(dateInput));
+
+    def test202_220_ShouldReturnCheckDateFail(self):
+        dateInput = '200B-12-31'
+        self.assertEquals(False, DSP.checkDateFormat(dateInput));
