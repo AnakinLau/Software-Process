@@ -215,7 +215,7 @@ def getObservationDegToInt(observationInput):
     degString = observationInput[0: posOfd]
     print('degString= {0}'.format(degString))
     if(degString == '-0'):
-        return -0
+        return -0.0
     return int(degString)
 
 
@@ -231,7 +231,10 @@ def convertMinToNumber(minNum):
 
 def convertDegMinToNumber(degInput, minInput):
     print('degInput= {0}'.format(degInput))
-    return degInput + convertMinToNumber(minInput)
+    if(degInput == -0.0 or degInput < 0 ):
+        degInput - convertMinToNumber(minInput)
+    else:
+        return degInput + convertMinToNumber(minInput)
 
 def convertDegMinStrToNumber(degMinStr):
     return convertDegMinToNumber(getObservationDegToInt(degMinStr),
