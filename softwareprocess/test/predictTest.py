@@ -187,4 +187,4 @@ class predictTest(unittest.TestCase):
         timeInput = '22:02:23'
         dateInput = '2002-02-02'
         expectedCumProg = '-3d34.8'
-        self.assertEquals(False, DSP.getAdjustedGHA(dateInput, timeInput));
+        self.assertEquals(expectedCumProg, DSP.getAdjustedGHA(dateInput, timeInput));
