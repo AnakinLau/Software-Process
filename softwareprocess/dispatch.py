@@ -214,6 +214,8 @@ def getObservationDegToInt(observationInput):
     posOfd = observationInput.find('d')
     degString = observationInput[0: posOfd]
     print('degString= {0}'.format(degString))
+    if(degString == '-0'):
+        return -0
     return int(degString)
 
 
