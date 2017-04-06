@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e6ed8a-7ecb-4d63-9a84-e59a13b56452" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/test/dispatchTest.py" afterPath="$PROJECT_DIR$/softwareprocess/test/dispatchTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/dispatch.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/test/predictTest.py" afterPath="$PROJECT_DIR$/softwareprocess/test/predictTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,14 +17,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4434524">
+    <splitter split-orientation="horizontal" split-proportion="0.54613096">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="dispatchTest.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatchTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="417">
-                  <caret line="110" column="0" lean-forward="true" selection-start-line="96" selection-start-column="4" selection-end-line="110" selection-end-column="0" />
+                <state relative-caret-position="254">
+                  <caret line="187" column="0" lean-forward="true" selection-start-line="167" selection-start-column="4" selection-end-line="187" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -35,8 +35,8 @@
           <file leaf-file-name="predictTest.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="417">
-                  <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+                <state relative-caret-position="351">
+                  <caret line="87" column="44" lean-forward="false" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -51,9 +51,24 @@
           <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="232">
-                  <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-                  <folding />
+                <state relative-caret-position="303">
+                  <caret line="311" column="19" lean-forward="false" selection-start-line="311" selection-start-column="19" selection-end-line="311" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#2450#3160#0" expanded="false" />
+                    <element signature="e#3209#4116#0" expanded="false" />
+                    <element signature="e#4154#4297#0" expanded="false" />
+                    <element signature="e#4345#4569#0" expanded="false" />
+                    <element signature="e#4611#4827#0" expanded="false" />
+                    <element signature="e#4867#5055#0" expanded="false" />
+                    <element signature="e#5085#5234#0" expanded="false" />
+                    <element signature="e#5271#5893#0" expanded="false" />
+                    <element signature="e#5928#6315#0" expanded="false" />
+                    <element signature="e#6413#6518#0" expanded="false" />
+                    <element signature="e#6573#6704#0" expanded="false" />
+                    <element signature="e#6743#6766#0" expanded="false" />
+                    <element signature="e#6820#6866#0" expanded="false" />
+                    <element signature="e#6913#7391#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -73,6 +88,7 @@
     <findStrings>
       <find>SM</find>
       <find>arn</find>
+      <find>check</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,8 +101,8 @@
         <option value="$PROJECT_DIR$/softwareprocess/convertString2Dictionary.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/SampleTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/Sample.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/dispatchTest.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/predictTest.py" />
       </list>
     </option>
@@ -419,15 +435,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 21h 11m 40s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 22h 08m 52s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 22h 12m 20s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.23 at 22h 13m 15s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -449,6 +456,15 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.05 at 15h 47m 21s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.05 at 15h 54m 34s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.05 at 15h 54m 54s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.05 at 15h 57m 51s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -458,7 +474,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295688" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33744222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33744222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -519,10 +535,10 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/softwareprocess/dispatch.py</url>
-          <line>182</line>
+          <line>187</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
@@ -543,7 +559,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2450#3160#0" expanded="false" />
+            <element signature="e#3209#4116#0" expanded="false" />
+            <element signature="e#4154#4297#0" expanded="false" />
+            <element signature="e#4345#4569#0" expanded="false" />
+            <element signature="e#4611#4827#0" expanded="false" />
+            <element signature="e#4867#5055#0" expanded="false" />
+            <element signature="e#5085#5234#0" expanded="false" />
+            <element signature="e#5271#5893#0" expanded="false" />
+            <element signature="e#5928#6315#0" expanded="false" />
+            <element signature="e#6413#6518#0" expanded="false" />
+            <element signature="e#6573#6704#0" expanded="false" />
+            <element signature="e#6743#6766#0" expanded="false" />
+            <element signature="e#6820#6866#0" expanded="false" />
+            <element signature="e#6913#7391#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -577,7 +608,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2450#3160#0" expanded="false" />
+            <element signature="e#3209#4116#0" expanded="false" />
+            <element signature="e#4154#4297#0" expanded="false" />
+            <element signature="e#4345#4569#0" expanded="false" />
+            <element signature="e#4611#4827#0" expanded="false" />
+            <element signature="e#4867#5055#0" expanded="false" />
+            <element signature="e#5085#5234#0" expanded="false" />
+            <element signature="e#5271#5893#0" expanded="false" />
+            <element signature="e#5928#6315#0" expanded="false" />
+            <element signature="e#6413#6518#0" expanded="false" />
+            <element signature="e#6573#6704#0" expanded="false" />
+            <element signature="e#6743#6766#0" expanded="false" />
+            <element signature="e#6820#6866#0" expanded="false" />
+            <element signature="e#6913#7391#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -721,28 +767,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatchTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="110" column="0" lean-forward="true" selection-start-line="96" selection-start-column="4" selection-end-line="110" selection-end-column="0" />
+        <state relative-caret-position="254">
+          <caret line="187" column="0" lean-forward="true" selection-start-line="167" selection-start-column="4" selection-end-line="187" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="311" column="19" lean-forward="false" selection-start-line="311" selection-start-column="19" selection-end-line="311" selection-end-column="19" />
+          <folding>
+            <element signature="e#2450#3160#0" expanded="false" />
+            <element signature="e#3209#4116#0" expanded="false" />
+            <element signature="e#4154#4297#0" expanded="false" />
+            <element signature="e#4345#4569#0" expanded="false" />
+            <element signature="e#4611#4827#0" expanded="false" />
+            <element signature="e#4867#5055#0" expanded="false" />
+            <element signature="e#5085#5234#0" expanded="false" />
+            <element signature="e#5271#5893#0" expanded="false" />
+            <element signature="e#5928#6315#0" expanded="false" />
+            <element signature="e#6413#6518#0" expanded="false" />
+            <element signature="e#6573#6704#0" expanded="false" />
+            <element signature="e#6743#6766#0" expanded="false" />
+            <element signature="e#6820#6866#0" expanded="false" />
+            <element signature="e#6913#7391#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="38" column="31" lean-forward="false" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
+        <state relative-caret-position="351">
+          <caret line="87" column="44" lean-forward="false" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

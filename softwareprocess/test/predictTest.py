@@ -43,3 +43,58 @@ class predictTest(unittest.TestCase):
         self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
         self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
         self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
+
+    def test202_101_ShouldReturnWithDefaultParamFailHaveTime(self):
+        entryDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '70:05:01'}
+        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
+            'date': '2001-01-01'}
+
+        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
+
+        self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
+        self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
+        self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
+
+    def test202_102_ShouldReturnWithDefaultParamFailHaveDate(self):
+        entryDict = {'body': 'Betelgeuse',  'op': 'predict', 'date': '2017-12-10'}
+        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
+            'date': '2001-01-01'}
+
+        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
+
+        self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
+        self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
+        self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
+
+# Test checkBodyFormat
+    def test202_201_ShouldReturnCheckBodyPass(self):
+        bodyInput = 'Kochab'
+        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+
+    def test202_202_ShouldReturnCheckBodyFail(self):
+        bodyInput = 'Kochabd'
+        self.assertEquals(False, DSP.checkBodyFormat(bodyInput));
+
+    def test202_203_ShouldReturnCheckBodyPass(self):
+        bodyInput = 'kochab'
+        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+
+    def test202_204_ShouldReturnCheckBodyPass(self):
+        bodyInput = 'KOChab'
+        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+
+    def test202_205_ShouldReturnCheckBodyPass(self):
+        bodyInput = 'kochab'
+        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+
+    def test202_203_ShouldReturnCheckObservationFail(self):
+        observationInput = '30dd1.5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_204_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d15'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
+
+    def test202_205_ShouldReturnCheckObservationFail(self):
+        observationInput = '30d1..5'
+        self.assertEquals(False, DSP.checkObservationFormat(observationInput));
