@@ -318,9 +318,9 @@ def checkBodyFormat(body):
         return True
 
 
-def checkDateFormat(date):
+def checkDateFormat(dateInput):
     try:
-        dateObj = datetime.strptime('%Y-%m-%d')
+        dateObj = datetime.strptime(dateInput, '%Y-%m-%d')
         if(dateObj.year > 2000):
             return True
         else:

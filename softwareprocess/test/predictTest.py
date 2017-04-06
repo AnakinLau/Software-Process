@@ -95,3 +95,7 @@ class predictTest(unittest.TestCase):
     def test202_206_ShouldReturnCheckBodyPass(self):
         bodyInput = 'kAus aUSt.'
         self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+
+    def test202_211_ShouldReturnCheckDatePass(self):
+        dateInput = '2002-03-04'
+        self.assertEquals(True, DSP.checkDateFormat(dateInput));
