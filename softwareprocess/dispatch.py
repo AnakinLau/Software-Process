@@ -361,7 +361,7 @@ def getAdjustedGHA(dateInput, timeInput):
     # Get Difference in years
     if(starDateTimeObj.year > GHAADateTimeObj.year):
         yearDiff = starDateTimeObj.year - GHAADateTimeObj.year
-        print('convertDegMinStrToNum='.format(convertDegMinStrToNumber(
+        print('convertDegMinStrToNum={0}'.format(convertDegMinStrToNumber(
                                                '-0d14.31667')))
         cumProg = convertNumToDegMinString(yearDiff *
                                            convertDegMinStrToNumber(
