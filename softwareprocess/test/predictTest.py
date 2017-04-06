@@ -37,6 +37,12 @@ class predictTest(unittest.TestCase):
         self.assertEquals(expectedString['error'],
                           DSP.dispatch({'op': 'predict', 'body': 'mars'})['error'])
 
+    def test200_012_ShouldReturnInvalidDate(self):
+        expectedString = {'error': 'invalid date'}
+        self.assertEquals(expectedString['error'],
+                          DSP.dispatch({'op': 'predict', 'body': 'Betelgeuse',
+                                        'date': '2000-01-24'})['error'])
+
 # Should change the string to have added default params if not already there
     def test202_100_ShouldReturnWithDefaultParam(self):
         entryDict = {'body': 'Betelgeuse',  'op': 'predict'}
