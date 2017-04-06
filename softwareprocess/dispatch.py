@@ -320,7 +320,7 @@ def checkBodyFormat(body):
 
 def checkDateFormat(dateInput):
     try:
-        dateObj = datetime.time.strptime(dateInput, '%Y-%m-%d')
+        dateObj = datetime.datetime.strptime(dateInput, '%Y-%m-%d')
         if(dateObj.year > 2000):
             return True
         else:
