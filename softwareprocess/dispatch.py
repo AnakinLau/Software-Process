@@ -60,6 +60,9 @@ def dispatch(values=None):
         if(checkDateFormat(values['date']) == False):
             values['error'] = 'invalid date'
             return values
+        if(checkTimeFormat(values['time']) == False):
+            values['error'] = 'invalid time'
+            return values
 
         return values
     elif(values['op'] == 'correct'):
@@ -325,5 +328,12 @@ def checkDateFormat(dateInput):
             return True
         else:
             return False
+    except ValueError:
+        return False
+
+def checkTimeFormat(timeInput):
+    try:
+        timeObj = datetime.datetime.strptime(timeInput, '%H:%M:%S')
+        return True
     except ValueError:
         return False

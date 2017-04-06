@@ -151,3 +151,27 @@ class predictTest(unittest.TestCase):
     def test202_221_ShouldReturnCheckDateFail(self):
         dateInput = '200B-ds-31'
         self.assertEquals(False, DSP.checkDateFormat(dateInput));
+
+    def test202_231_ShouldReturnCheckTimePass(self):
+        timeInput = '01:02:52'
+        self.assertEquals(True, DSP.checkTimeFormat(timeInput));
+
+    def test202_232_ShouldReturnCheckTimePass(self):
+        timeInput = '00:00:00'
+        self.assertEquals(True, DSP.checkTimeFormat(timeInput));
+
+    def test202_233_ShouldReturnCheckTimePass(self):
+        timeInput = '21:02:52'
+        self.assertEquals(True, DSP.checkTimeFormat(timeInput));
+
+    def test202_234_ShouldReturnCheckTimeFail(self):
+        timeInput = '01:02:63'
+        self.assertEquals(False, DSP.checkTimeFormat(timeInput));
+
+    def test202_235_ShouldReturnCheckTimeFail(self):
+        timeInput = '01:67:13'
+        self.assertEquals(False, DSP.checkTimeFormat(timeInput));
+
+    def test202_236_ShouldReturnCheckTimeFail(self):
+        timeInput = '25:02:63'
+        self.assertEquals(False, DSP.checkTimeFormat(timeInput));
