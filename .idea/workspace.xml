@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e6ed8a-7ecb-4d63-9a84-e59a13b56452" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/test/predictTest.py" afterPath="$PROJECT_DIR$/softwareprocess/test/predictTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/dispatch.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +34,8 @@
           <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="42" />
+                <state relative-caret-position="187">
+                  <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -44,11 +44,9 @@
           <file leaf-file-name="adjustHelper.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/softwareprocess/adjustHelper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1683">
-                  <caret line="99" column="42" lean-forward="false" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
-                  <folding>
-                    <element signature="e#0#11#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="17">
+                  <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -108,8 +106,8 @@
       <find>SM</find>
       <find>arn</find>
       <find>check</find>
-      <find>getObservationDegToInt</find>
       <find>convertNumToDegMinString</find>
+      <find>getObservationDegToInt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,9 +123,9 @@
         <option value="$PROJECT_DIR$/softwareprocess/test/dispatchTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/conversionHelper.py" />
         <option value="$PROJECT_DIR$/softwareprocess/adjustHelper.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/predictTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/predictHelper.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
       </list>
     </option>
   </component>
@@ -459,9 +457,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 06m 26s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 07m 47s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -487,6 +482,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.07 at 03h 24m 57s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 03h 31m 48s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -544,7 +542,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/softwareprocess/dispatch.py</url>
-          <line>109</line>
+          <line>111</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="4" />
@@ -720,20 +718,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/convertString2Dictionary.py" />
-    <entry file="file://$PROJECT_DIR$/softwareprocess/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -774,26 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatchTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="186" column="79" lean-forward="true" selection-start-line="186" selection-start-column="79" selection-end-line="186" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/adjustHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="99" column="42" lean-forward="false" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -801,14 +765,6 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/conversionHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -823,10 +779,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/conversionHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/adjustHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatchTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="186" column="79" lean-forward="true" selection-start-line="186" selection-start-column="79" selection-end-line="186" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/test/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="42" />
+        <state relative-caret-position="187">
+          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
           <folding />
         </state>
       </provider>
