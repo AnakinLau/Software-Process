@@ -210,6 +210,7 @@ def getAltitude(dictInput):
 
 
 # Helper methods getting degrees and minutes
+# Does not work with a negative zero~
 def getObservationDegToInt(observationInput):
     posOfd = observationInput.find('d')
     degString = observationInput[0: posOfd]
@@ -232,11 +233,13 @@ def convertMinToNumber(minNum):
 def convertDegMinToNumber(degInput, minInput):
     print('degInput= {0}'.format(degInput))
     if(degInput == -0.0 or degInput < 0 ):
+        degInput = 0
         degInput - convertMinToNumber(minInput)
     else:
         return degInput + convertMinToNumber(minInput)
 
 def convertDegMinStrToNumber(degMinStr):
+
     return convertDegMinToNumber(getObservationDegToInt(degMinStr),
                           getObservationMinToFloat(degMinStr))
 
