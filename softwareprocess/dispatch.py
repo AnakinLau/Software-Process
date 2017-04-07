@@ -397,7 +397,8 @@ def getNumOfLeapYearInbtw(after, before):
             numOfLeapYears = numOfLeapYears + 1
     return numOfLeapYears
 
-
-
+def getTotalProgression(numOfLeapYears):
+    return convertNumToDegMinString(numOfLeapYears
+                                    * convertDegMinStrToNumber('0d59.0'))
 
 

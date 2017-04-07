@@ -196,3 +196,7 @@ class predictTest(unittest.TestCase):
     def test202_303_GetNumOfLeapYearInbtwPass(self):
         expectedNum = 3
         self.assertEquals(expectedNum, DSP.getNumOfLeapYearInbtw(2001,2016));
+
+    def test202_304_GetTotalProgressionPass(self):
+        expectedNum = '2d56.9'
+        self.assertEquals(expectedNum, DSP.getTotalProgression(3));
