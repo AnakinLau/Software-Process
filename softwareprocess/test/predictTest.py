@@ -238,10 +238,24 @@ class predictTest(unittest.TestCase):
     def test203_001_ShouldReturnWithLongLatBetelgeuse(self):
         entryDict = {'body': 'Betelgeuse',  'op': 'predict'}
         correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
-            'date': '2016-01-01', 'long': '75d53.6', 'lat': '7d24.3'}
+            'date': '2016-01-17', 'long': '75d53.6', 'lat': '7d24.3'}
 
         parsedDict = DSP.dispatch({'body': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
-            'date': '2016-01-01'})
+            'date': '2016-01-17'})
+
+        self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
+        self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
+        self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
+        self.assertEquals(correctReturnedDict['long'], parsedDict['long']);
+        self.assertEquals(correctReturnedDict['lat'], parsedDict['lat']);
+
+    def test203_002_ShouldReturnWithLongLatError(self):
+        entryDict = {'body': 'Betelgeuse',  'op': 'predict'}
+        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
+            'date': '2016-01-17', 'long': '75d53.6', 'lat': '7d24.3', 'error': ''}
+
+        parsedDict = DSP.dispatch({'body': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
+            'date': '2016-01-17', 'long': '75d53.6', 'lat': '7d24.3'})
 
         self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
         self.assertEquals(correctReturnedDict['time'], parsedDict['time']);

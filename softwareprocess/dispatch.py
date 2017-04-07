@@ -69,6 +69,9 @@ def dispatch(values=None):
         if(PH.checkTimeFormat(values['time']) == False):
             values['error'] = 'invalid time'
             return values
+        if('long' in values or 'lat' in values):
+            values['error'] = 'long and/or lat already exist!'
+            return values
         # Greenwich Hour Angle for Aries
         GHAA = {'date': '2001-01-01', 'time': '00:00:00',
                 'deg': '100d42.6'}
