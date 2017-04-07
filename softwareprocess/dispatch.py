@@ -373,7 +373,10 @@ def getAdjustedGHA(dateInput, timeInput):
         yearDiff = starDateTimeObj.year - GHAADateTimeObj.year
         print('convertDegMinStrToNum={0}'.format(convertDegMinStrToNumber(
                                                '-0d14.31667')))
-        cumProg = convertNumToDegMinString(yearDiff *
+        cumProg = getCumProg(yearDiff)
+    return cumProg # FOR NOW~
+
+def getCumProg(yearDiff):
+    return convertNumToDegMinString(yearDiff *
                                            convertDegMinStrToNumber(
                                                '-0d14.31667'))
-    return cumProg # FOR NOW~
