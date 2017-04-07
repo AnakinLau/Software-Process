@@ -13,8 +13,8 @@
 import math
 import datetime
 import calendar
-from softwareprocess.adjustHelper import adjustHelper as AH
-from softwareprocess.predictHelper import predictHelper as PH
+import softwareprocess.adjustHelper as AH
+import softwareprocess.predictHelper as PH
 import softwareprocess.conversionHelper as CH
 
 def dispatch(values=None):

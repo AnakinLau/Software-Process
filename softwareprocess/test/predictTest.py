@@ -1,9 +1,9 @@
 import unittest
 import datetime
 import softwareprocess.dispatch as DSP
-import softwareprocess.conversionHelper as CH
-import softwareprocess.adjustHelper as AH
-import softwareprocess.predictHelper as PH
+import softwareprocess.conversionHelper
+import softwareprocess.adjustHelper
+import softwareprocess.predictHelper
 
 import math
 
