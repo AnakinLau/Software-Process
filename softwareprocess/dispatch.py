@@ -266,7 +266,11 @@ def convertNumToDegMinString(numInput):
         deg = -1 * deg
     deg = deg + int(numInput)
 
+    # make sure if it's bigger than 360deg it is chopped
+    deg = deg % 360
+
     return str(deg) + 'd' + str(mins)
+
 
 
 # Helper Classes Specifically for Predict()
