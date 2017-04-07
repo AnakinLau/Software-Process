@@ -219,3 +219,8 @@ class predictTest(unittest.TestCase):
     def test202_307_GetTotalAdjustedGHAPass(self):
         expectedNum = '164d54.5'
         self.assertEquals(expectedNum, PH.getTotalAdjustedGHA('100d4.8', '64d49.7'));
+
+    def test202_308_GetGHAStarLongPass(self):
+        expectedNum = '75d53.6'
+        self.assertEquals(expectedNum, PH.getGHAStarLong('164d54.5', '270d59.1'));
+
