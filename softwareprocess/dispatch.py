@@ -55,12 +55,12 @@ def dispatch(values=None):
 
     # Predict operations------>
     elif(values['op'] == 'predict'):
-        if(not('body' in values)):
+        if(not('name' in values)):
             values['error'] = 'mandatory information is missing'
             del values['op']
             return values
         values = getDefaultOptionalValues(values, 'predict')
-        if(PH.checkBodyFormat(values['body']) == False):
+        if(PH.checkBodyFormat(values['name']) == False):
             values['error'] = 'star not in catalog'
             return values
         if(PH.checkDateFormat(values['date']) == False):
@@ -74,8 +74,8 @@ def dispatch(values=None):
             return values
 
         adjustedGHA = PH.getAdjustedGHA(values['date'], values['time'])
-        values['long'] = PH.getGHAStarLong(adjustedGHA, values['body'])
-        values['lat'] = PH.getGHAStarLat(values['body'])
+        values['long'] = PH.getGHAStarLong(adjustedGHA, values['name'])
+        values['lat'] = PH.getGHAStarLat(values['name'])
 
         return values
 
