@@ -407,4 +407,6 @@ def getPrimeMeriRotation(GHAA, CumProg, LeapProg):
     + convertDegMinStrToNumber(LeapProg)
     return convertNumToDegMinString(answer)
 
-
+def getEarthRotatSinceYearStart(viewingDateTime):
+    totalSec = viewingDateTime - datetime(viewingDateTime.year, '%Y')
+    
