@@ -7,6 +7,8 @@
     of information based on temperature, altitude, pressure, height, and horizon.
     Gives back error when unexpected input is put through.
 
+    Now this program will also give back latitude and longitude to a given star
+    given a specific time and date
 """
 import math
 import datetime
