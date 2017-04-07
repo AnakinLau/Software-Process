@@ -1,9 +1,9 @@
 import unittest
 import datetime
 import softwareprocess.dispatch as DSP
-import softwareprocess.conversionHelper
-import softwareprocess.adjustHelper
-import softwareprocess.predictHelper
+import softwareprocess.conversionHelper as CH
+import softwareprocess.adjustHelper as AH
+import softwareprocess.predictHelper as PH
 
 import math
 
@@ -97,19 +97,19 @@ class predictTest(unittest.TestCase):
 # Test checkBodyFormat
     def test202_201_ShouldReturnCheckBodyPass(self):
         bodyInput = 'Kochab'
-        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+        self.assertEquals(True, PH.checkBodyFormat(bodyInput));
 
     def test202_202_ShouldReturnCheckBodyFail(self):
         bodyInput = 'Kochabd'
-        self.assertEquals(False, DSP.checkBodyFormat(bodyInput));
+        self.assertEquals(False, PH.checkBodyFormat(bodyInput));
 
     def test202_203_ShouldReturnCheckBodyPass(self):
         bodyInput = 'kochab'
-        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+        self.assertEquals(True, PH.checkBodyFormat(bodyInput));
 
     def test202_204_ShouldReturnCheckBodyPass(self):
         bodyInput = 'KOChab'
-        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+        self.assertEquals(True, PH.checkBodyFormat(bodyInput));
 
     def test202_205_ShouldReturnCheckBodyPass(self):
         bodyInput = 'Kaus Aust.'
