@@ -239,8 +239,13 @@ def convertDegMinToNumber(degInput, minInput):
         return degInput + convertMinToNumber(minInput)
 
 def convertDegMinStrToNumber(degMinStr):
-
-    return convertDegMinToNumber(getObservationDegToInt(degMinStr),
+    posOfd = degMinStr.find('d')
+    degString = degMinStr[0: posOfd]
+    if(degString == '-0'):
+        return convertDegMinToNumber(-0.0,
+                          getObservationMinToFloat(degMinStr))
+    else:
+        return convertDegMinToNumber(getObservationDegToInt(degMinStr),
                           getObservationMinToFloat(degMinStr))
 
 def convertNumToDegMinString(numInput):
