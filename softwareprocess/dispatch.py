@@ -73,10 +73,11 @@ def dispatch(values=None):
         GHAA = {'date': '2001-01-01', 'time': '00:00:00',
                 'deg': '100d42.6'}
         adjustedGHA = PH.getAdjustedGHA(values['date'], values['time'])
-
-
+        values['long'] = PH.getGHAStarLong(adjustedGHA, values['body'])
+        values['lat'] = PH.getGHAStarLat(values['body'])
 
         return values
+
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):

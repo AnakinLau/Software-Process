@@ -162,3 +162,8 @@ def getGHAStarLong(GHAAries, starName):
     GHAstarDeg = CH.convertDegMinStrToNumber(currentStar['SHA']) \
                  + CH.convertDegMinStrToNumber(GHAAries)
     return CH.convertNumToDegMinString(GHAstarDeg)
+
+def getGHAStarLat(starName):
+    starDict = createStarDict()
+    currentStar = starDict[starName.title()]
+    return currentStar['declination']

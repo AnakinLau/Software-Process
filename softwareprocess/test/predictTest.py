@@ -229,3 +229,19 @@ class predictTest(unittest.TestCase):
         expectedNum = '75d53.6'
         #'270d59.1'
         self.assertEquals(expectedNum, PH.getGHAStarLong('164d54.5', 'BetElgEuse'));
+
+    def test202_310_GetGHAStarLatPass(self):
+        expectedNum = '7d24.3'
+        self.assertEquals(expectedNum, PH.getGHAStarLat('BetElgEuse'));
+
+    # Testing whole of Predict Implementation
+    def test203_001_ShouldReturnWithLongLatBetelgeuse(self):
+        entryDict = {'body': 'Betelgeuse',  'op': 'predict'}
+        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
+            'date': '2001-01-01'}
+
+        parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
+
+        self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
+        self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
+        self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
