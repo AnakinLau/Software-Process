@@ -101,7 +101,7 @@ def getAdjustedGHA(dateInput, timeInput):
     GHAADateTimeObj = datetime.datetime.strptime('2001-01-01 00:00:00',
                                                  '%Y-%m-%d %H:%M:%S')
     GHAADeg = '100d42.6'
-    cumProg = 0
+    cumProg = '0d0.0'
 
     # Get Difference in years
     if(starDateTimeObj.year > GHAADateTimeObj.year):
