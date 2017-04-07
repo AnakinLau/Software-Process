@@ -234,7 +234,7 @@ def convertDegMinToNumber(degInput, minInput):
     print('degInput= {0}'.format(degInput))
     if(degInput == -0.0 or degInput < 0 ):
         degInput = 0
-        degInput - convertMinToNumber(minInput)
+        return degInput - convertMinToNumber(minInput)
     else:
         return degInput + convertMinToNumber(minInput)
 
