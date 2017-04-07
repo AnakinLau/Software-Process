@@ -1,6 +1,8 @@
 import unittest
 import datetime
 import softwareprocess.dispatch as DSP
+import softwareprocess.conversionHelper as CH
+
 import math
 
 class predictTest(unittest.TestCase):

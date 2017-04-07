@@ -13,6 +13,8 @@
 import math
 import datetime
 import calendar
+import softwareprocess.adjustHelper as AH
+import softwareprocess.predictHelper as PH
 def dispatch(values=None):
 
     #Validate parm
@@ -32,22 +34,22 @@ def dispatch(values=None):
             del values['op']
             return values
         values = getDefaultOptionalValues(values, 'adjust')
-        if(checkObservationFormat(values['observation']) == False):
+        if(AH.checkObservationFormat(values['observation']) == False):
             values['error'] =  'observation is invalid'
             return values
-        if(checkHeightFormat(values['height']) == False):
+        if(AH.checkHeightFormat(values['height']) == False):
             values['error'] =  'height is invalid'
             return values
-        if(checkPressureFormat(values['pressure']) == False):
+        if(AH.checkPressureFormat(values['pressure']) == False):
             values['error'] =  'pressure is invalid'
             return values
-        if(checkTemperatureFormat(values['temperature']) == False):
+        if(AH.checkTemperatureFormat(values['temperature']) == False):
             values['error'] =  'temperature is invalid'
             return values
-        if(checkHorizonFormat(values['horizon']) == False):
+        if(AH.checkHorizonFormat(values['horizon']) == False):
             values['error'] =  'horizon is invalid'
             return values
-        values['altitude'] = getAltitude(values)
+        values['altitude'] = AH.getAltitude(values)
         return values
 
     # Predict operations------>
@@ -57,19 +59,19 @@ def dispatch(values=None):
             del values['op']
             return values
         values = getDefaultOptionalValues(values, 'predict')
-        if(checkBodyFormat(values['body']) == False):
+        if(PH.checkBodyFormat(values['body']) == False):
             values['error'] = 'star not in catalog'
             return values
-        if(checkDateFormat(values['date']) == False):
+        if(PH.checkDateFormat(values['date']) == False):
             values['error'] = 'invalid date'
             return values
-        if(checkTimeFormat(values['time']) == False):
+        if(PH.checkTimeFormat(values['time']) == False):
             values['error'] = 'invalid time'
             return values
         # Greenwich Hour Angle for Aries
         GHAA = {'date': '2001-01-01', 'time': '00:00:00',
                 'deg': '100d42.6'}
-        adjustedGHA = getAdjustedGHA(values['date'], values['time'])
+        adjustedGHA = PH.getAdjustedGHA(values['date'], values['time'])
 
 
         return values
