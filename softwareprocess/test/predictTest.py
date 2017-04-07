@@ -113,109 +113,109 @@ class predictTest(unittest.TestCase):
 
     def test202_205_ShouldReturnCheckBodyPass(self):
         bodyInput = 'Kaus Aust.'
-        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+        self.assertEquals(True, PH.checkBodyFormat(bodyInput));
 
     def test202_206_ShouldReturnCheckBodyPass(self):
         bodyInput = 'kAus aUSt.'
-        self.assertEquals(True, DSP.checkBodyFormat(bodyInput));
+        self.assertEquals(True, PH.checkBodyFormat(bodyInput));
 
     def test202_211_ShouldReturnCheckDatePass(self):
         dateInput = '2002-03-04'
-        self.assertEquals(True, DSP.checkDateFormat(dateInput));
+        self.assertEquals(True, PH.checkDateFormat(dateInput));
 
     def test202_212_ShouldReturnCheckDatePass(self):
         dateInput = '2002-01-01'
-        self.assertEquals(True, DSP.checkDateFormat(dateInput));
+        self.assertEquals(True, PH.checkDateFormat(dateInput));
 
     def test202_213_ShouldReturnCheckDateTrue(self):
         dateInput = '2001-01-01'
-        self.assertEquals(True, DSP.checkDateFormat(dateInput));
+        self.assertEquals(True, PH.checkDateFormat(dateInput));
 
     def test202_214_ShouldReturnCheckDateFail(self):
         dateInput = '2002-14-04'
-        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+        self.assertEquals(False, PH.checkDateFormat(dateInput));
 
     def test202_215_ShouldReturnCheckDateFail(self):
         dateInput = '2002-03-60'
-        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+        self.assertEquals(False, PH.checkDateFormat(dateInput));
 
     def test202_216_ShouldReturnCheckDateFail(self):
         dateInput = '2002-02-29'
-        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+        self.assertEquals(False, PH.checkDateFormat(dateInput));
 
     def test202_217_ShouldReturnCheckDateFail(self):
         dateInput = '2001-00-00'
-        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+        self.assertEquals(False, PH.checkDateFormat(dateInput));
 
     def test202_218_ShouldReturnCheckDatePass(self):
         dateInput = '2001-01-01'
-        self.assertEquals(True, DSP.checkDateFormat(dateInput));
+        self.assertEquals(True, PH.checkDateFormat(dateInput));
 
     def test202_219_ShouldReturnCheckDateFail(self):
         dateInput = '2000-12-31'
-        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+        self.assertEquals(False, PH.checkDateFormat(dateInput));
 
     def test202_220_ShouldReturnCheckDateFail(self):
         dateInput = '200B-12-31'
-        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+        self.assertEquals(False, PH.checkDateFormat(dateInput));
 
     def test202_221_ShouldReturnCheckDateFail(self):
         dateInput = '200B-ds-31'
-        self.assertEquals(False, DSP.checkDateFormat(dateInput));
+        self.assertEquals(False, PH.checkDateFormat(dateInput));
 
     def test202_231_ShouldReturnCheckTimePass(self):
         timeInput = '01:02:52'
-        self.assertEquals(True, DSP.checkTimeFormat(timeInput));
+        self.assertEquals(True, PH.checkTimeFormat(timeInput));
 
     def test202_232_ShouldReturnCheckTimePass(self):
         timeInput = '00:00:00'
-        self.assertEquals(True, DSP.checkTimeFormat(timeInput));
+        self.assertEquals(True, PH.checkTimeFormat(timeInput));
 
     def test202_233_ShouldReturnCheckTimePass(self):
         timeInput = '21:02:52'
-        self.assertEquals(True, DSP.checkTimeFormat(timeInput));
+        self.assertEquals(True, PH.checkTimeFormat(timeInput));
 
     def test202_234_ShouldReturnCheckTimeFail(self):
         timeInput = '01:02:63'
-        self.assertEquals(False, DSP.checkTimeFormat(timeInput));
+        self.assertEquals(False, PH.checkTimeFormat(timeInput));
 
     def test202_235_ShouldReturnCheckTimeFail(self):
         timeInput = '01:67:13'
-        self.assertEquals(False, DSP.checkTimeFormat(timeInput));
+        self.assertEquals(False, PH.checkTimeFormat(timeInput));
 
     def test202_236_ShouldReturnCheckTimeFail(self):
         timeInput = '25:02:63'
-        self.assertEquals(False, DSP.checkTimeFormat(timeInput));
+        self.assertEquals(False, PH.checkTimeFormat(timeInput));
 
 # Testing Calculations
     def test202_301_GetAdjustedGHAPass(self):
         timeInput = '03:15:42'
         dateInput = '2016-01-17'
         expectedCumProg = '164d54.5'
-        self.assertEquals(expectedCumProg, DSP.getAdjustedGHA(dateInput, timeInput));
+        self.assertEquals(expectedCumProg, PH.getAdjustedGHA(dateInput, timeInput));
 
     def test202_302_GetCumProgPass(self):
         expectedCumProg = '-3d34.8'
-        self.assertEquals(expectedCumProg, DSP.getCumProg(15));
+        self.assertEquals(expectedCumProg, PH.getCumProg(15));
 
     def test202_303_GetNumOfLeapYearInbtwPass(self):
         expectedNum = 3
-        self.assertEquals(expectedNum, DSP.getNumOfLeapYearInbtw(2001,2016));
+        self.assertEquals(expectedNum, PH.getNumOfLeapYearInbtw(2001,2016));
 
     def test202_304_GetTotalProgressionPass(self):
         expectedNum = '2d56.9'
-        self.assertEquals(expectedNum, DSP.getTotalProgression(3));
+        self.assertEquals(expectedNum, PH.getTotalProgression(3));
 
     def test202_305_GetPrimeMeriRotationPass(self):
         expectedNum = '100d4.8'
-        self.assertEquals(expectedNum, DSP.getPrimeMeriRotation('100d42.6', '-3d34.8',
+        self.assertEquals(expectedNum, PH.getPrimeMeriRotation('100d42.6', '-3d34.8',
                                                                 '2d56.9'));
     def test202_306_GetEarthRotatSinceYearStartPass(self):
         expectedNum = '64d49.7'
         starDateTimeObj = datetime.datetime.strptime('2016-01-17 03:15:42',
                                                  '%Y-%m-%d %H:%M:%S')
-        self.assertEquals(expectedNum, DSP.getEarthRotatSinceYearStart(starDateTimeObj));
+        self.assertEquals(expectedNum, PH.getEarthRotatSinceYearStart(starDateTimeObj));
 
     def test202_307_GetTotalAdjustedGHAPass(self):
         expectedNum = '164d54.5'
-        self.assertEquals(expectedNum, DSP.getTotalAdjustedGHA('100d4.8', '64d49.7'));
+        self.assertEquals(expectedNum, PH.getTotalAdjustedGHA('100d4.8', '64d49.7'));
