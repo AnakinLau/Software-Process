@@ -416,7 +416,7 @@ def getEarthRotatSinceYearStart(viewingDateTime):
                                                  '%Y-%m-%d %H:%M:%S')
     #totalSec = viewingDateTime - datetime.datetime(viewingDateTime.year, '%Y')
     totalSec = viewingDateTime - yearStartDateTimeObj
-    return convertNumToDegMinString(totalSec/ 86164.1 * 360)
+    return convertNumToDegMinString(totalSec.total_seconds()/ 86164.1 * 360)
 
 def getTotalAdjustedGHA(primeMeriRotat, yearRotat):
         return convertNumToDegMinString(convertDegMinStrToNumber(primeMeriRotat) +
