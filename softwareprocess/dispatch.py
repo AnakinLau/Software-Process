@@ -412,7 +412,10 @@ def getPrimeMeriRotation(GHAADeg, CumProg, LeapProg):
     return convertNumToDegMinString(answer)
 
 def getEarthRotatSinceYearStart(viewingDateTime):
-    totalSec = viewingDateTime - datetime.datetime(viewingDateTime.year)
+    yearStartDateTimeObj = datetime.datetime.strptime(viewingDateTime.year + '-01-17 03:15:42',
+                                                 '%Y-%m-%d %H:%M:%S')
+    #totalSec = viewingDateTime - datetime.datetime(viewingDateTime.year, '%Y')
+    totalSec = viewingDateTime - yearStartDateTimeObj
     return convertNumToDegMinString(totalSec/ 86164.1 * 360)
 
 def getTotalAdjustedGHA(primeMeriRotat, yearRotat):
