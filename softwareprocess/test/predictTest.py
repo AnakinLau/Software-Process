@@ -257,7 +257,7 @@ class predictTest(unittest.TestCase):
 
         parsedDict = DSP.dispatch({'name': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
             'date': '2016-01-17', 'long': '75d53.6', 'lat': '7d24.3'})
-
+        print parsedDict
         self.assertEquals(correctReturnedDict['name'], parsedDict['name']);
         self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
         self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
