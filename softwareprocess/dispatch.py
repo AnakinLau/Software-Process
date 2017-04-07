@@ -13,9 +13,9 @@
 import math
 import datetime
 import calendar
-from softwareprocess import adjustHelper as AH
+import adjustHelper as AH
 #from softwareprocess.adjustHelper import
-from softwareprocess import predictHelper as PH
+import predictHelper as PH
 from softwareprocess import conversionHelper
 
 def dispatch(values=None):
