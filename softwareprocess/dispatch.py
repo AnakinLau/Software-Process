@@ -232,7 +232,7 @@ def convertMinToNumber(minNum):
 
 # Does not work with a negative zero~
 def convertDegMinToNumber(degInput, minInput):
-    print('degInput= {0}'.format(degInput))
+    print('convertDegMinToNumber degInput= {0}'.format(degInput))
     if(degInput < 0 ):
         return degInput - convertMinToNumber(minInput)
     else:
@@ -249,7 +249,7 @@ def convertDegMinStrToNumber(degMinStr):
                           getObservationMinToFloat(degMinStr))
 
 def convertNumToDegMinString(numInput):
-    print ("numInput= {0}".format(numInput))
+    print ("convertNumToDegMinString numInput= {0}".format(numInput))
     if numInput >= 0:
         decimalNum = float(numInput % 1)
     else:
