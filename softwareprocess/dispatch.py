@@ -10,6 +10,7 @@
 """
 import math
 import datetime
+import calendar
 def dispatch(values=None):
 
     #Validate parm
@@ -374,9 +375,26 @@ def getAdjustedGHA(dateInput, timeInput):
         print('convertDegMinStrToNum={0}'.format(convertDegMinStrToNumber(
                                                '-0d14.31667')))
         cumProg = getCumProg(yearDiff)
+
+    #Consider Leap Years
+
+
+
     return cumProg # FOR NOW~
 
 def getCumProg(yearDiff):
     return convertNumToDegMinString(yearDiff *
                                            convertDegMinStrToNumber(
                                                '-0d14.31667'))
+
+def getNumOfLeapYearInbtw(after, before):
+    startYear = after + 1
+    numOfLeapYears = 0
+    for x in xrange(startYear, before):
+        numOfLeapYears = numOfLeapYears + 1
+    return numOfLeapYears
+
+
+
+
+

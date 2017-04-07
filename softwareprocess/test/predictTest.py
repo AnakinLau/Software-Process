@@ -188,3 +188,11 @@ class predictTest(unittest.TestCase):
         dateInput = '2016-02-02'
         expectedCumProg = '-3d34.8'
         self.assertEquals(expectedCumProg, DSP.getAdjustedGHA(dateInput, timeInput));
+
+    def test202_302_GetCumProgPass(self):
+        expectedCumProg = '-3d34.8'
+        self.assertEquals(expectedCumProg, DSP.getCumProg(15));
+
+    def test202_303_GetNumOfLeapYearInbtwPass(self):
+        expectedCumProg = 3
+        self.assertEquals(expectedCumProg, DSP.getCumProg(15));
