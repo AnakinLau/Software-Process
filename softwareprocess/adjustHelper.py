@@ -25,7 +25,8 @@ def checkObservationFormat(observation):
         return  False
 
     # check if deg is a digit first
-    if(len(degString) > 2 or len(degString) == 0):
+    #if(len(degString) > 2:
+    if(len(degString) == 0):
         return False
     if(not(degString.isdigit())):
         return False
