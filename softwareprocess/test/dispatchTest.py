@@ -240,9 +240,9 @@ class dispatchTest(unittest.TestCase):
         observationInput = '-d00.0g'
         self.assertEquals(False, AH.checkObservationFormat(observationInput));
 
-    def test202_219_ShouldReturnCheckObservationFail(self):
+    def test202_219_ShouldReturnCheckObservationPass(self):
         observationInput = '001d0.0'
-        self.assertEquals(False, AH.checkObservationFormat(observationInput));
+        self.assertEquals(True, AH.checkObservationFormat(observationInput));
 
     # Test checkHeightFormat
     def test202_300_ShouldReturnCheckHeightPass(self):
