@@ -233,7 +233,7 @@ def convertMinToNumber(minNum):
 # Does not work with a negative zero~
 def convertDegMinToNumber(degInput, minInput):
     print('degInput= {0}'.format(degInput))
-    if(degInput == -0.0 or degInput < 0 ):
+    if(degInput < 0 ):
         return degInput - convertMinToNumber(minInput)
     else:
         return degInput + convertMinToNumber(minInput)
