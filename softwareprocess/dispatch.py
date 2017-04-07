@@ -402,3 +402,9 @@ def getTotalProgression(numOfLeapYears):
                                     * convertDegMinStrToNumber('0d59.0'))
 
 
+def getPrimeMeriRotation(GHAA, CumProg, LeapProg):
+    answer = convertDegMinStrToNumber(GHAA) + convertDegMinStrToNumber(CumProg)\
+    + convertDegMinStrToNumber(LeapProg)
+    return convertNumToDegMinString(answer)
+
+
