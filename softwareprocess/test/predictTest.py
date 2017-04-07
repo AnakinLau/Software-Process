@@ -225,3 +225,7 @@ class predictTest(unittest.TestCase):
         #'270d59.1'
         self.assertEquals(expectedNum, PH.getGHAStarLong('164d54.5', 'betelgeuse'));
 
+    def test202_309_GetGHAStarLongPass(self):
+        expectedNum = '75d53.6'
+        #'270d59.1'
+        self.assertEquals(expectedNum, PH.getGHAStarLong('164d54.5', 'BetElgEuse'));
