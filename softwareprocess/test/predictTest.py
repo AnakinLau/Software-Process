@@ -3,7 +3,7 @@ import datetime
 import softwareprocess.dispatch as DSP
 import softwareprocess.conversionHelper as CH
 import softwareprocess.adjustHelper as AH
-import softwareprocess.predictHelper as PH
+import softwareprocesspredictHelper as PH
 
 import math
 
