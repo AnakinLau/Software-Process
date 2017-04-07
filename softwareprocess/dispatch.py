@@ -242,8 +242,8 @@ def convertDegMinStrToNumber(degMinStr):
     posOfd = degMinStr.find('d')
     degString = degMinStr[0: posOfd]
     if(degString == '-0'):
-        return convertDegMinToNumber(-0.0,
-                          getObservationMinToFloat(degMinStr))
+        return convertDegMinToNumber(-1,
+                          getObservationMinToFloat(degMinStr)) -1
     else:
         return convertDegMinToNumber(getObservationDegToInt(degMinStr),
                           getObservationMinToFloat(degMinStr))
