@@ -228,7 +228,7 @@ def getObservationMinToFloat(observationInput):
 def convertMinToNumber(minNum):
     return float(minNum/60)
 
-
+# Does not work with a negative zero~
 def convertDegMinToNumber(degInput, minInput):
     print('degInput= {0}'.format(degInput))
     if(degInput == -0.0 or degInput < 0 ):
