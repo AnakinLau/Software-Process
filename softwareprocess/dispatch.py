@@ -72,9 +72,7 @@ def dispatch(values=None):
         if('long' in values or 'lat' in values):
             values['error'] = 'long and/or lat already exist!'
             return values
-        # Greenwich Hour Angle for Aries
-        GHAA = {'date': '2001-01-01', 'time': '00:00:00',
-                'deg': '100d42.6'}
+
         adjustedGHA = PH.getAdjustedGHA(values['date'], values['time'])
         values['long'] = PH.getGHAStarLong(adjustedGHA, values['body'])
         values['lat'] = PH.getGHAStarLat(values['body'])
