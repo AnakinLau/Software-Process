@@ -387,12 +387,14 @@ def getCumProg(yearDiff):
                                            convertDegMinStrToNumber(
                                                '-0d14.31667'))
 
+
+# Find num of leap years after xxx before yyy
 def getNumOfLeapYearInbtw(after, before):
     startYear = after + 1
     numOfLeapYears = 0
     for x in xrange(startYear, before):
-        if()
-        numOfLeapYears = numOfLeapYears + 1
+        if(calendar.isleap(x)):
+            numOfLeapYears = numOfLeapYears + 1
     return numOfLeapYears
 
 
