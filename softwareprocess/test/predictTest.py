@@ -194,5 +194,5 @@ class predictTest(unittest.TestCase):
         self.assertEquals(expectedCumProg, DSP.getCumProg(15));
 
     def test202_303_GetNumOfLeapYearInbtwPass(self):
-        expectedCumProg = 3
-        self.assertEquals(expectedCumProg, DSP.getCumProg(15));
+        expectedNum = 3
+        self.assertEquals(expectedNum, DSP.getNumOfLeapYearInbtw(2001,2016));

@@ -375,7 +375,7 @@ def getAdjustedGHA(dateInput, timeInput):
         print('convertDegMinStrToNum={0}'.format(convertDegMinStrToNumber(
                                                '-0d14.31667')))
         cumProg = getCumProg(yearDiff)
-
+    return cumProg
     #Consider Leap Years
 
 
@@ -391,6 +391,7 @@ def getNumOfLeapYearInbtw(after, before):
     startYear = after + 1
     numOfLeapYears = 0
     for x in xrange(startYear, before):
+        if()
         numOfLeapYears = numOfLeapYears + 1
     return numOfLeapYears
 
