@@ -212,3 +212,7 @@ class predictTest(unittest.TestCase):
                                                  '%Y-%m-%d %H:%M:%S')
         self.assertEquals(expectedNum, DSP.getPrimeMeriRotation('100d42.6', '-3d34.8',
                                                                 '2d56.9'));
+
+    def test202_305_GetTotalAdjustedGHAPass(self):
+        expectedNum = '164d54.5'
+        self.assertEquals(expectedNum, DSP.getTotalAdjustedGHA('100d4.8', '64d49.7'));
