@@ -69,6 +69,7 @@ def dispatch(values=None):
                 'deg': '100d42.6'}
         adjustedGHA = getAdjustedGHA(values['date'], values['time'])
 
+
         return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
@@ -366,8 +367,8 @@ def getAdjustedGHA(dateInput, timeInput):
                                                  '%Y-%m-%d %H:%M:%S')
     GHAADateTimeObj = datetime.datetime.strptime('2001-01-01 00:00:00',
                                                  '%Y-%m-%d %H:%M:%S')
+    GHAADeg = '100d42.6'
     cumProg = 0
-
 
     # Get Difference in years
     if(starDateTimeObj.year > GHAADateTimeObj.year):
@@ -375,10 +376,13 @@ def getAdjustedGHA(dateInput, timeInput):
         print('convertDegMinStrToNum={0}'.format(convertDegMinStrToNumber(
                                                '-0d14.31667')))
         cumProg = getCumProg(yearDiff)
-    return cumProg
+
     #Consider Leap Years
-
-
+    leapYears = getNumOfLeapYearInbtw(GHAADateTimeObj.year, starDateTimeObj.year)
+    totalProg = getTotalProgression(leapYears)
+    primeMeriRotat = getPrimeMeriRotation(GHAADeg,cumProg,totalProg)
+    rotatFromYearStart = getEarthRotatSinceYearStart(starDateTimeObj)
+    
 
     return cumProg # FOR NOW~
 
@@ -402,11 +406,11 @@ def getTotalProgression(numOfLeapYears):
                                     * convertDegMinStrToNumber('0d59.0'))
 
 
-def getPrimeMeriRotation(GHAA, CumProg, LeapProg):
-    answer = convertDegMinStrToNumber(GHAA) + convertDegMinStrToNumber(CumProg)\
+def getPrimeMeriRotation(GHAADeg, CumProg, LeapProg):
+    answer = convertDegMinStrToNumber(GHAADeg) + convertDegMinStrToNumber(CumProg)\
     + convertDegMinStrToNumber(LeapProg)
     return convertNumToDegMinString(answer)
 
 def getEarthRotatSinceYearStart(viewingDateTime):
     totalSec = viewingDateTime - datetime(viewingDateTime.year, '%Y')
-    
+    return convertNumToDegMinString(totalSec/ 86164.1 * 360)

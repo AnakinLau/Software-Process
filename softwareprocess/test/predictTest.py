@@ -1,4 +1,5 @@
 import unittest
+import datetime
 import softwareprocess.dispatch as DSP
 import math
 
@@ -203,5 +204,11 @@ class predictTest(unittest.TestCase):
 
     def test202_305_GetPrimeMeriRotationPass(self):
         expectedNum = '100d4.8'
+        self.assertEquals(expectedNum, DSP.getPrimeMeriRotation('100d42.6', '-3d34.8',
+                                                                '2d56.9'));
+    def test202_305_GetEarthRotatSinceYearStartPass(self):
+        expectedNum = '100d4.8'
+        starDateTimeObj = datetime.datetime.strptime('2016-01-17 03:15:42',
+                                                 '%Y-%m-%d %H:%M:%S')
         self.assertEquals(expectedNum, DSP.getPrimeMeriRotation('100d42.6', '-3d34.8',
                                                                 '2d56.9'));
