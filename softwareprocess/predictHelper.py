@@ -156,3 +156,6 @@ def getTotalAdjustedGHA(primeMeriRotat, yearRotat):
         return CH.convertNumToDegMinString(CH.convertDegMinStrToNumber(primeMeriRotat) +
                                  CH.convertDegMinStrToNumber(yearRotat))
 
+def getGHAStar(starName):
+    starDict = createStarDict()
+    currentStar = starDict[starName.Title()]

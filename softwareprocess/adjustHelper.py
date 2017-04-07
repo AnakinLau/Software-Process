@@ -107,3 +107,4 @@ def getAltitude(dictInput):
     degMinNum = degMinNum + dip + refraction
     print("degMinNum= {0}".format(degMinNum))
     return CH.convertNumToDegMinString(degMinNum)
+

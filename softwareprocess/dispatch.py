@@ -14,9 +14,7 @@ import math
 import datetime
 import calendar
 import adjustHelper as AH
-#from softwareprocess.adjustHelper import
 import predictHelper as PH
-from softwareprocess import conversionHelper
 
 def dispatch(values=None):
 
@@ -75,6 +73,7 @@ def dispatch(values=None):
         GHAA = {'date': '2001-01-01', 'time': '00:00:00',
                 'deg': '100d42.6'}
         adjustedGHA = PH.getAdjustedGHA(values['date'], values['time'])
+
 
 
         return values
