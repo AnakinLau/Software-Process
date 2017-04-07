@@ -1,6 +1,6 @@
 import datetime
 import calendar
-import softwareprocess.conversionHelper as CH
+import conversionHelper as CH
 
 def predictHelper():
 

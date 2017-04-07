@@ -1,5 +1,5 @@
 import math
-import softwareprocess.conversionHelper as CH
+import conversionHelper as CH
 
 def adjustHelper():
 
