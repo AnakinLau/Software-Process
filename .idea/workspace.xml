@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e6ed8a-7ecb-4d63-9a84-e59a13b56452" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/dispatch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/test/predictTest.py" afterPath="$PROJECT_DIR$/softwareprocess/test/predictTest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/softwareprocess/predictHelper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,12 +34,22 @@
           <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="394" column="22" lean-forward="false" selection-start-line="394" selection-start-column="22" selection-end-line="394" selection-end-column="22" />
+                <state relative-caret-position="680">
+                  <caret line="40" column="61" lean-forward="true" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
                   <folding>
-                    <element signature="e#282#293#0" expanded="true" />
-                    <element signature="e#8949#12836#0" expanded="false" />
+                    <element signature="e#397#408#0" expanded="true" />
+                    <element signature="e#9064#12951#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="predictHelper.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/softwareprocess/predictHelper.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -52,7 +61,7 @@
           <file leaf-file-name="predictTest.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
+                <state relative-caret-position="3196">
                   <caret line="188" column="31" lean-forward="false" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
@@ -78,6 +87,7 @@
       <find>arn</find>
       <find>check</find>
       <find>getObservationDegToInt</find>
+      <find>convertNumToDegMinString</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -91,8 +101,9 @@
         <option value="$PROJECT_DIR$/softwareprocess/test/SampleTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/Sample.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/dispatchTest.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/predictTest.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/predictHelper.py" />
       </list>
     </option>
   </component>
@@ -424,9 +435,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 01m 20s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 02m 36s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -454,9 +462,12 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 26m 50s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 01h 29m 12s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16649105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -501,18 +512,19 @@
     <MESSAGE value="Assignment 2 is completed, along with a testing file." />
     <MESSAGE value="Assignment 3 is completed, along with a testing file, and custom tests with TDD" />
     <MESSAGE value="Assignment 4 is completed, along with a testing file, and custom tests with TDD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 4 is completed, along with a testing file, and custom tests with TDD" />
+    <MESSAGE value="Assignment 5 part B is complete and TDDed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 5 part B is complete and TDDed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/softwareprocess/dispatch.py</url>
-          <line>202</line>
+          <line>204</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/softwareprocess/dispatch.py</url>
-          <line>282</line>
+          <line>284</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -550,8 +562,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#282#293#0" expanded="true" />
-            <element signature="e#8949#12836#0" expanded="false" />
+            <element signature="e#397#408#0" expanded="true" />
+            <element signature="e#9064#12951#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -569,8 +581,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#282#293#0" expanded="true" />
-            <element signature="e#8949#12836#0" expanded="false" />
+            <element signature="e#397#408#0" expanded="true" />
+            <element signature="e#9064#12951#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -606,8 +618,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#282#293#0" expanded="true" />
-            <element signature="e#8949#12836#0" expanded="false" />
+            <element signature="e#397#408#0" expanded="true" />
+            <element signature="e#9064#12951#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -762,23 +774,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="394" column="22" lean-forward="false" selection-start-line="394" selection-start-column="22" selection-end-line="394" selection-end-column="22" />
+        <state relative-caret-position="3196">
+          <caret line="188" column="31" lean-forward="false" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
           <folding>
-            <element signature="e#282#293#0" expanded="true" />
-            <element signature="e#8949#12836#0" expanded="false" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/predictHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="188" column="31" lean-forward="false" selection-start-line="188" selection-start-column="31" selection-end-line="188" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="61" lean-forward="true" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#397#408#0" expanded="true" />
+            <element signature="e#9064#12951#0" expanded="false" />
           </folding>
         </state>
       </provider>
