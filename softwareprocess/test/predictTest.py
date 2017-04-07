@@ -207,11 +207,10 @@ class predictTest(unittest.TestCase):
         self.assertEquals(expectedNum, DSP.getPrimeMeriRotation('100d42.6', '-3d34.8',
                                                                 '2d56.9'));
     def test202_305_GetEarthRotatSinceYearStartPass(self):
-        expectedNum = '100d4.8'
+        expectedNum = '64d49.7'
         starDateTimeObj = datetime.datetime.strptime('2016-01-17 03:15:42',
                                                  '%Y-%m-%d %H:%M:%S')
-        self.assertEquals(expectedNum, DSP.getPrimeMeriRotation('100d42.6', '-3d34.8',
-                                                                '2d56.9'));
+        self.assertEquals(expectedNum, DSP.getEarthRotatSinceYearStart(starDateTimeObj));
 
     def test202_305_GetTotalAdjustedGHAPass(self):
         expectedNum = '164d54.5'
