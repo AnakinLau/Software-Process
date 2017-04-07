@@ -412,7 +412,7 @@ def getPrimeMeriRotation(GHAADeg, CumProg, LeapProg):
     return convertNumToDegMinString(answer)
 
 def getEarthRotatSinceYearStart(viewingDateTime):
-    yearStartDateTimeObj = datetime.datetime.strptime(viewingDateTime.year + '-01-17 03:15:42',
+    yearStartDateTimeObj = datetime.datetime.strptime(str(viewingDateTime.year) + '-01-17 03:15:42',
                                                  '%Y-%m-%d %H:%M:%S')
     #totalSec = viewingDateTime - datetime.datetime(viewingDateTime.year, '%Y')
     totalSec = viewingDateTime - yearStartDateTimeObj
