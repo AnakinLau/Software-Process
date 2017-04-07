@@ -185,9 +185,9 @@ class predictTest(unittest.TestCase):
 
 # Testing Calculations
     def test202_301_GetAdjustedGHAPass(self):
-        timeInput = '22:02:23'
-        dateInput = '2016-02-02'
-        expectedCumProg = '-3d34.8'
+        timeInput = '03:15:42'
+        dateInput = '2016-01-17'
+        expectedCumProg = '164d54.5'
         self.assertEquals(expectedCumProg, DSP.getAdjustedGHA(dateInput, timeInput));
 
     def test202_302_GetCumProgPass(self):

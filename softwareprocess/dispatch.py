@@ -390,9 +390,9 @@ def getAdjustedGHA(dateInput, timeInput):
     totalProg = getTotalProgression(leapYears)
     primeMeriRotat = getPrimeMeriRotation(GHAADeg,cumProg,totalProg)
     rotatFromYearStart = getEarthRotatSinceYearStart(starDateTimeObj)
-    adjustedGHA = primeMeriRotat + rotatFromYearStart
+    adjustedGHA = getTotalAdjustedGHA(primeMeriRotat, rotatFromYearStart)
 
-    return cumProg # FOR NOW~
+    return adjustedGHA # FOR NOW~
 
 def getCumProg(yearDiff):
     return convertNumToDegMinString(yearDiff *
