@@ -290,7 +290,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(DP.dispatch(values)['lat'], '7d24.3')
 
     def test300_110ShouldPredictTheLocationWithoutDateAndTime(self):
-        values = {'op': 'predict', 'body': 'Betelgeuse'}
+        values = {'op': 'predict', 'name': 'Betelgeuse'}
         data = DP.dispatch(values).get('long').split('d')
         result = int(data[0]) + float(data[1])/60
         self.assertAlmostEquals(result, 11.695, delta=1.695)
