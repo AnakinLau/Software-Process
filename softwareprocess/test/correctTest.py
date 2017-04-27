@@ -55,7 +55,7 @@ class correctTest(unittest.TestCase):
         expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
-        self.assertEquals(True, not('error' in DSP.dispatch(inputString))
+        self.assertEquals(True, not('error' in DSP.dispatch(inputString)))
 
     # Test return of Invalid Input Errors
     def test100_100_ShouldReturnErrorInvalidLat(self):
