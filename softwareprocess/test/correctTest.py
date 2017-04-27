@@ -344,7 +344,7 @@ class correctTest(unittest.TestCase):
                                CH.convertDegMinStrToNumber(correctedAlt),
                                delta=0.0025)
 
-    # Test return of getCorrectedAltitude
+    # Test return of getCorrectedDistance
     def test200_030_ShouldReturnTrueGetCorrectedDistance(self):
         expectedString = 104
         inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
@@ -358,6 +358,7 @@ class correctTest(unittest.TestCase):
                                int(correctedDist),
                                delta=0.0025)
 
+    # Test return of getCorrectedAzimuth
     def test200_040_ShouldReturnTrueGetCorrectedAzimuth(self):
         expectedString = '0d36.8'
         inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',

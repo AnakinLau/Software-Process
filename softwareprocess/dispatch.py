@@ -101,6 +101,12 @@ def dispatch(values=None):
             values['error'] = 'invalid assumedLong'
             return values
         LHA = OH.getLHA(values)
+        interDist = OH.getInterDist(values, LHA)
+        correctAlt = OH.getCorrectedAltitude(interDist)
+        correctDist = OH.getCorrectedDistance(values, correctAlt)
+        correctAzimuth = OH.getCorrectedAzimuth(values, interDist)
+        values['correctedDistance'] = correctDist
+        values['correctedAzimuth'] = correctAzimuth
 
         return values
     elif(values['op'] == 'locate'):
