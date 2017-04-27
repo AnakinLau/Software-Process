@@ -79,7 +79,8 @@ def dispatch(values=None):
         return values
 
     elif(values['op'] == 'correct'):
-        return values    #This calculation is stubbed out
+        if(not())
+        return values
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
     else:

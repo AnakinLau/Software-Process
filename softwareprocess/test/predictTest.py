@@ -205,7 +205,7 @@ class predictTest(unittest.TestCase):
     #def test202_304_GetTotalProgressionPass(self):
     #    expectedNum = '2d56.9'
     #    self.assertEquals(expectedNum, PH.getTotalProgression(3));
-#
+    #
     #def test202_305_GetPrimeMeriRotationPass(self):
     #    expectedNum = '100d4.8'
     #    self.assertEquals(expectedNum, PH.getPrimeMeriRotation('100d42.6', '-3d34.8',
