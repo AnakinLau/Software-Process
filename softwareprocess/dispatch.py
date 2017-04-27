@@ -15,6 +15,7 @@ import datetime
 import calendar
 import adjustHelper as AH
 import predictHelper as PH
+import correctHelper as OH
 
 def dispatch(values=None):
 
@@ -78,12 +79,17 @@ def dispatch(values=None):
 
         return values
 
+    # Correct operations------>
     elif(values['op'] == 'correct'):
         if(not(('lat' in values) and ('long' in values) and ('altitude' in values)
                and ('assumedLat' in values) and ('assumedLat' in values)
                and ('assumedLong' in values))):
             values['error'] = 'mandatory information is missing'
             return values
+        if(OH.checkLatFormat(values['lat']) == False):
+            values['error'] = 'invalid lat'
+            return values
+
         return values
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
