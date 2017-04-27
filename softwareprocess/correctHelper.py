@@ -78,5 +78,5 @@ def getCorrectedAltitude(interDist):
 def getCorrectedDistance(values, correctedAlt):
     altInNum = CH.convertDegMinStrToNumber(values['altitude'])
     corrtAltInNum = CH.convertDegMinStrToNumber(correctedAlt)
-    altInNum - corrtAltInNum
+    return altInNum - corrtAltInNum
 

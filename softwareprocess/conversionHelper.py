@@ -63,3 +63,11 @@ def convertNumToDegMinString(numInput):
         deg = (deg % 360) * -1
 
     return str(deg) + 'd' + str(mins)
+
+def convertDegMinToArcMinInt(degMinString):
+    posOfd = degMinString.find('d')
+    degString = degMinString[0: posOfd]
+    #print('degString= {0}'.format(degString))
+    if(degString == '-0'):
+        return -0.0
+    return int(degString)
