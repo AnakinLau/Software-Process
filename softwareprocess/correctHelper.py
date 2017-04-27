@@ -1,6 +1,7 @@
 import datetime
 import calendar
 import conversionHelper as CH
+import math
 
 # Helper Classes Specifically for Correct()
 def checkCorrectInputFormat(checkVal, valType):
@@ -60,5 +61,11 @@ def getLHA(values):
                  + CH.convertDegMinStrToNumber(values['assumedLong'])
     return CH.convertNumToDegMinString(LHANumber)
 
-def getInterDist(value, LHA):
-    math.sin()
+def getInterDist(values, LHA):
+    latInNum = CH.convertDegMinStrToNumber(values['lat'])
+    assLatInNum = CH.convertDegMinStrToNumber(values['assumedLat'])
+    LHAInNum = CH.convertDegMinStrToNumber(LHA)
+    interDist = (math.sin(math.radians(latInNum)) * math.sin(math.radians(assLatInNum))) + \
+                (math.cos(math.radians(latInNum)) * math.cos(math.radians(assLatInNum)) *
+                 math.cos(math.radians(LHAInNum)))
+    return interDist
