@@ -53,7 +53,7 @@ class correctTest(unittest.TestCase):
 
     def test100_016_ShouldNotReturnMandatoryInfoIsMissing(self):
         expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
-        inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',
+        inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(True, not('error' in DSP.dispatch(inputString)))
 
@@ -72,7 +72,7 @@ class correctTest(unittest.TestCase):
 
     def test100_102_ShouldReturnNoErrorInvalidLat(self):
         expectedString = {'error':'invalid lat', 'op': 'correct'}
-        inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',
+        inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(True, not('error' in DSP.dispatch(inputString)))
 
