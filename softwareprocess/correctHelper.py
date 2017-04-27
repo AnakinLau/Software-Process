@@ -69,3 +69,8 @@ def getInterDist(values, LHA):
                 (math.cos(math.radians(latInNum)) * math.cos(math.radians(assLatInNum)) *
                  math.cos(math.radians(LHAInNum)))
     return interDist
+
+def getCorrectedAltitude(interDist):
+    ansInRad = math.arcsin(math.radians(interDist))
+    ansInDeg = math.degrees(ansInRad)
+    return CH.convertNumToDegMinString(ansInDeg)
