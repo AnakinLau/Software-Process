@@ -379,9 +379,6 @@ class correctTest(unittest.TestCase):
         inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
                        'assumedLat':'35d59.7', 'assumedLong': '74d35.3'}
 
-        self.assertAlmostEqual(CH.convertDegMinStrToNumber(expectedString),
-                               CH.convertDegMinStrToNumber(azimuth),
-                               delta=0.0015)
         self.assertEquals(expectedString['correctedDistance'],
                           DSP.dispatch(inputString)['correctedDistance']);
         self.assertEquals(expectedString['correctedAzimuth'],
