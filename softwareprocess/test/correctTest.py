@@ -21,7 +21,37 @@ class correctTest(unittest.TestCase):
         expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
         self.assertEquals(expectedString['error'], DSP.dispatch({'op': 'correct'})['error'])
 
-    def test100_011_ShouldReturnMandatoryInfoIsMissing(self):
+    def test100_011_ShouldReturnMandatoryInfoIsMissingLat(self):
+        expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
+        inputString = {'op':'correct', 'long':'95.41.6', 'altitude':'13d42.3',
+                       'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
+
+    def test100_012_ShouldReturnMandatoryInfoIsMissingLong(self):
+        expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
+        inputString = {'op':'correct', 'lat':'16d32.3', 'altitude':'13d42.3',
+                       'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
+
+    def test100_013_ShouldReturnMandatoryInfoIsMissingAlt(self):
+        expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
+        inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6',
+                       'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
+
+    def test100_014_ShouldReturnMandatoryInfoIsMissingAssLat(self):
+        expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
+        inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',
+                       'assumedLong':' 74d35.3'}
+        self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
+
+    def test100_015_ShouldReturnMandatoryInfoIsMissingAssLong(self):
+        expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
+        inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',
+                       'assumedLat':'-53d38.4'}
+        self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
+
+    def test100_016_ShouldNotReturnMandatoryInfoIsMissing(self):
         expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
