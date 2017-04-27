@@ -55,12 +55,12 @@ def dispatch(values=None):
 
     # Predict operations------>
     elif(values['op'] == 'predict'):
-        if(not('name' in values)):
+        if(not('body' in values)):
             values['error'] = 'mandatory information is missing'
             del values['op']
             return values
         values = getDefaultOptionalValues(values, 'predict')
-        if(PH.checkBodyFormat(values['name']) == False):
+        if(PH.checkBodyFormat(values['body']) == False):
             values['error'] = 'star not in catalog'
             return values
         if(PH.checkDateFormat(values['date']) == False):
