@@ -90,7 +90,7 @@ def checkAltitudeFormat(altitude):
     if(not(isinstance(altitude, basestring))):
         return False
     else:
-        if(long.count('d') != 1):
+        if(altitude.count('d') != 1):
             return False
         posOfd = altitude.find('d')
         degString = altitude[0: posOfd]
