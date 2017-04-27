@@ -288,6 +288,6 @@ class correctTest(unittest.TestCase):
         stringAnsw = OH.getLHA(inputString)
 
         self.assertAlmostEqual(CH.convertDegMinStrToNumber(expectedString),
-                               CH.convertDegMinStrToNumber(227.023333333),
+                               CH.convertDegMinStrToNumber(stringAnsw),
                                delta=0.5)
         #self.assertEquals(expectedString, OH.getLHA(inputString))
