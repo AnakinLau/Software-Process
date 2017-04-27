@@ -34,7 +34,7 @@ class predictTest(unittest.TestCase):
         self.assertEquals(expectedString, DSP.dispatch({'op': 'unknown'}))
 
     def test200_010_ShouldReturnMandatoryInfoIsMissing(self):
-        expectedString = {'error':'mandatory information is missing'}
+        expectedString = {'error':'mandatory information is missing', 'op': 'predict'}
         self.assertEquals(expectedString, DSP.dispatch({'op': 'predict'}))
 
     def test200_011_ShouldReturnStarNotInCatalog(self):
