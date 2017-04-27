@@ -57,7 +57,7 @@ def dispatch(values=None):
     elif(values['op'] == 'predict'):
         if(not('body' in values)):
             values['error'] = 'mandatory information is missing'
-            del values['op']
+            #del values['op']
             return values
         values = getDefaultOptionalValues(values, 'predict')
         if(PH.checkBodyFormat(values['body']) == False):
