@@ -355,7 +355,7 @@ class correctTest(unittest.TestCase):
         correctedDist = OH.getCorrectedDistance(inputString, correctedAlt)
 
         self.assertAlmostEqual(expectedString,
-                               correctedDist,
+                               int(correctedDist),
                                delta=0.0025)
 
     def test200_040_ShouldReturnTrueGetCorrectedAzimuth(self):

@@ -79,7 +79,7 @@ def getCorrectedDistance(values, correctedAlt):
     altInNum = CH.convertDegMinStrToNumber(values['altitude'])
     corrtAltInNum = CH.convertDegMinStrToNumber(correctedAlt)
     corrDistString = CH.convertNumToDegMinString(altInNum - corrtAltInNum)
-    return CH.convertDegMinToArcMinInt(corrDistString)
+    return str(CH.convertDegMinToArcMinInt(corrDistString))
 
 def getCorrectedAzimuth(values, interDist):
     latInNum = CH.convertDegMinStrToNumber(values['lat'])
