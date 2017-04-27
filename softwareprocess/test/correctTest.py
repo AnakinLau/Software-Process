@@ -415,7 +415,7 @@ class correctTest(unittest.TestCase):
                                delta=0.0015)
 
     def test200_041_ShouldReturnTrueGetCorrectedAzimuth(self):
-        expectedString = '0d36.8'
+        expectedString = '164d42.9'
         inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',
                         'assumedLat':'-53d38.4', 'assumedLong': '74d35.3'}
         stringLHA = OH.getLHA(inputString)
