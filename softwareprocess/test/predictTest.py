@@ -236,11 +236,11 @@ class predictTest(unittest.TestCase):
 
     # Testing whole of Predict Implementation
     def test203_001_ShouldReturnWithLongLatBetelgeuse(self):
-        entryDict = {'name': 'Betelgeuse',  'op': 'predict'}
-        correctReturnedDict = {'name': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
+        entryDict = {'body': 'Betelgeuse',  'op': 'predict'}
+        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
             'date': '2016-01-17', 'long': '75d53.6', 'lat': '7d24.3'}
 
-        parsedDict = DSP.dispatch({'name': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
+        parsedDict = DSP.dispatch({'body': 'Betelgeuse',  'op': 'predict', 'time': '03:15:42',
             'date': '2016-01-17'})
         print parsedDict
         self.assertEquals(correctReturnedDict['name'], parsedDict['name']);
