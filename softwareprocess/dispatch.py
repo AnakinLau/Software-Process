@@ -85,19 +85,19 @@ def dispatch(values=None):
                and ('assumedLat' in values) and ('assumedLong' in values))):
             values['error'] = 'mandatory information is missing'
             return values
-        if(OH.checkLatFormat(values['lat']) == False):
+        if(OH.checkCorrectInputFormat(values['lat'], 'Lat') == False):
             values['error'] = 'invalid lat'
             return values
-        if(OH.checkLongFormat(values['long']) == False):
+        if(OH.checkCorrectInputFormat(values['long'], 'Long') == False):
             values['error'] = 'invalid long'
             return values
-        if(OH.checkAltitudeFormat(values['altitude']) == False):
+        if(OH.checkCorrectInputFormat(values['altitude'], 'Altitude') == False):
             values['error'] = 'invalid altitude'
             return values
-        if(OH.checkAssumedLatFormat(values['assumedLat']) == False):
+        if(OH.checkCorrectInputFormat(values['assumedLat'], 'AssumedLat') == False):
             values['error'] = 'invalid assumedLat'
             return values
-        if(OH.checkAssumedLongFormat(values['assumedLong']) == False):
+        if(OH.checkCorrectInputFormat(values['assumedLong'], 'AssumedLong') == False):
             values['error'] = 'invalid assumedLong'
             return values
 
