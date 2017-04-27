@@ -74,7 +74,7 @@ def dispatch(values=None):
             return values
 
         adjustedGHA = PH.getAdjustedGHA(values['date'], values['time'])
-        values['long'] = PH.getGHAStarLong(adjustedGHA, values['name'])
+        values['long'] = PH.getGHAStarLong(adjustedGHA, values['body'])
         values['lat'] = PH.getGHAStarLat(values['name'])
 
         return values
