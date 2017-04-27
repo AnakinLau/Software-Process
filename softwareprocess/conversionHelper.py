@@ -71,6 +71,6 @@ def convertDegMinToArcMinInt(degMinString):
     #int(minString)
     #print('degString= {0}'.format(degString))
     if('-' in degString):
-        return (int(degString) * 60) - (int(minString))
+        return (int(degString) * 60) - round(minString, 1)
     else:
-        return (int(degString) * 60) + (int(minString))
+        return (int(degString) * 60) + round(minString, 1)
