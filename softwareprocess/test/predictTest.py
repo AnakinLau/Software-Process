@@ -202,14 +202,14 @@ class predictTest(unittest.TestCase):
         expectedNum = 3
         self.assertEquals(expectedNum, PH.getNumOfLeapYearInbtw(2001,2016));
 
-    def test202_304_GetTotalProgressionPass(self):
-        expectedNum = '2d56.9'
-        self.assertEquals(expectedNum, PH.getTotalProgression(3));
-
-    def test202_305_GetPrimeMeriRotationPass(self):
-        expectedNum = '100d4.8'
-        self.assertEquals(expectedNum, PH.getPrimeMeriRotation('100d42.6', '-3d34.8',
-                                                                '2d56.9'));
+    #def test202_304_GetTotalProgressionPass(self):
+    #    expectedNum = '2d56.9'
+    #    self.assertEquals(expectedNum, PH.getTotalProgression(3));
+#
+    #def test202_305_GetPrimeMeriRotationPass(self):
+    #    expectedNum = '100d4.8'
+    #    self.assertEquals(expectedNum, PH.getPrimeMeriRotation('100d42.6', '-3d34.8',
+    #                                                            '2d56.9'));
     def test202_306_GetEarthRotatSinceYearStartPass(self):
         expectedNum = '64d49.7'
         starDateTimeObj = datetime.datetime.strptime('2016-01-17 03:15:42',
