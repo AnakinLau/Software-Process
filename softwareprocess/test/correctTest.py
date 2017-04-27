@@ -289,5 +289,5 @@ class correctTest(unittest.TestCase):
 
         self.assertAlmostEqual(CH.convertDegMinStrToNumber(expectedString),
                                CH.convertDegMinStrToNumber(stringAnsw),
-                               delta=0.0005)
+                               delta=0.0013)
         #self.assertEquals(expectedString, OH.getLHA(inputString))
