@@ -73,14 +73,14 @@ def checkLongFormat(long):
         # check if deg is a digit first
         if(len(degString) == 0):
             return False
-        try:
-            int(degString)
-        except ValueError:
-            print('degString is not a digit ={0}', format(degString))
-            return False
-        #if(not(degString.isdigit())):
+        #try:
+        #    int(degString)
+        #except ValueError:
         #    print('degString is not a digit ={0}', format(degString))
         #    return False
+        if(not(degString.isdigit())): # Can be use to eliminate -0
+            print('degString is not a digit ={0}', format(degString))
+            return False
         if(int(degString) < 0 or int(degString) >= 360):
             return False
         return True
