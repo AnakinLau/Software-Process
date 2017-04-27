@@ -84,7 +84,8 @@ def getCorrectedDistance(values, correctedAlt):
 def getCorrectedAzimuth(values, interDist):
     latInNum = CH.convertDegMinStrToNumber(values['lat'])
     assLatInNum = CH.convertDegMinStrToNumber(values['assumedLat'])
-    azimuthInRad = math.acos((math.sin(latInNum) - (math.sin(assLatInNum) * interDist))/
-              (math.cos(assLatInNum) * math.cos(math.asin(interDist))))
+    azimuthInRad = math.acos((math.sin(math.radians(latInNum)) -
+                              (math.sin(math.radians(assLatInNum)) * interDist))/
+                             (math.cos(math.radians(assLatInNum)) * math.cos(math.asin(interDist))))
     azimuthInDeg = math.degrees(azimuthInRad)
     return CH.convertNumToDegMinString(azimuthInDeg)
