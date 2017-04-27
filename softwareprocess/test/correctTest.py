@@ -368,4 +368,4 @@ class correctTest(unittest.TestCase):
         azimuth = OH.getCorrectedAzimuth(inputString, interDist)
         self.assertAlmostEqual(CH.convertDegMinStrToNumber(expectedString),
                                CH.convertDegMinStrToNumber(azimuth),
-                               delta=0.0025)
+                               delta=0.0015)
