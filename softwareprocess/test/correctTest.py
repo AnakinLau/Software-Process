@@ -312,4 +312,4 @@ class correctTest(unittest.TestCase):
         correctedAlt = OH.getCorrectedAltitude(interDist)
         self.assertAlmostEqual(CH.convertDegMinStrToNumber(expectedString),
                                CH.convertDegMinStrToNumber(correctedAlt),
-                               delta=0.0035)
+                               delta=0.0025)
