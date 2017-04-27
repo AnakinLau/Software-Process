@@ -40,35 +40,35 @@ class predictTest(unittest.TestCase):
     def test200_011_ShouldReturnStarNotInCatalog(self):
         expectedString = {'error': 'star not in catalog'}
         self.assertEquals(expectedString['error'],
-                          DSP.dispatch({'op': 'predict', 'name': 'mars'})['error'])
+                          DSP.dispatch({'op': 'predict', 'body': 'mars'})['error'])
 
     def test200_012_ShouldReturnInvalidDate(self):
         expectedString = {'error': 'invalid date'}
         self.assertEquals(expectedString['error'],
-                          DSP.dispatch({'op': 'predict', 'name': 'Betelgeuse',
+                          DSP.dispatch({'op': 'predict', 'body': 'Betelgeuse',
                                         'date': '2000-01-24'})['error'])
 
     def test200_013_ShouldReturnInvalidDate(self):
         expectedString = {'error': 'invalid date'}
         self.assertEquals(expectedString['error'],
-                          DSP.dispatch({'op': 'predict', 'name': 'Betelgeuse',
+                          DSP.dispatch({'op': 'predict', 'body': 'Betelgeuse',
                                         'date': '200A-01-24'})['error'])
 
     def test200_013_ShouldReturnInvalidTime(self):
         expectedString = {'error': 'invalid time'}
         self.assertEquals(expectedString['error'],
-                          DSP.dispatch({'op': 'predict', 'name': 'Betelgeuse',
+                          DSP.dispatch({'op': 'predict', 'body': 'Betelgeuse',
                                         'date': '2007-01-24', 'time': '01:24:60'})['error'])
 
 # Should change the string to have added default params if not already there
     def test202_100_ShouldReturnWithDefaultParam(self):
-        entryDict = {'name': 'Betelgeuse',  'op': 'predict'}
-        correctReturnedDict = {'name': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
+        entryDict = {'body': 'Betelgeuse',  'op': 'predict'}
+        correctReturnedDict = {'body': 'Betelgeuse',  'op': 'predict', 'time': '00:00:00',
             'date': '2001-01-01'}
 
         parsedDict = DSP.getDefaultOptionalValues(entryDict, 'predict')
 
-        self.assertEquals(correctReturnedDict['name'], parsedDict['name']);
+        self.assertEquals(correctReturnedDict['body'], parsedDict['body']);
         self.assertEquals(correctReturnedDict['time'], parsedDict['time']);
         self.assertEquals(correctReturnedDict['date'], parsedDict['date']);
 
