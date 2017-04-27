@@ -23,4 +23,6 @@ class correctTest(unittest.TestCase):
 
     def test100_011_ShouldReturnMandatoryInfoIsMissing(self):
         expectedString = {'error':'mandatory information is missing', 'op': 'correct'}
-        self.assertEquals(expectedString['error'], DSP.dispatch({'op': 'correct'})['error'])
+        inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',
+                       'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
