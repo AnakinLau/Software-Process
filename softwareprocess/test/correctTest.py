@@ -312,11 +312,31 @@ class correctTest(unittest.TestCase):
                                OH.getInterDist(inputString, stringLHA),
                                delta=0.0035)
 
+    def test200_011_ShouldReturnTrueGetInterDist(self):
+        expectedString = 0.581474856
+        inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
+                       'assumedLat':'35d59.7', 'assumedLong': '74d35.3'}
+        stringLHA = OH.getLHA(inputString)
+        self.assertAlmostEqual(expectedString,
+                               OH.getInterDist(inputString, stringLHA),
+                               delta=0.0035)
+
     # Test return of getCorrectedAltitude
     def test200_020_ShouldReturnTrueGetCorrectedAltitude(self):
         expectedString = '-52d07.8'
         inputString = {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong': '74d35.3'}
+        stringLHA = OH.getLHA(inputString)
+        interDist = OH.getInterDist(inputString, stringLHA)
+        correctedAlt = OH.getCorrectedAltitude(interDist)
+        self.assertAlmostEqual(CH.convertDegMinStrToNumber(expectedString),
+                               CH.convertDegMinStrToNumber(correctedAlt),
+                               delta=0.0025)
+
+    def test200_021_ShouldReturnTrueGetCorrectedAltitude(self):
+        expectedString = '35d33.3'
+        inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
+                       'assumedLat':'35d59.7', 'assumedLong': '74d35.3'}
         stringLHA = OH.getLHA(inputString)
         interDist = OH.getInterDist(inputString, stringLHA)
         correctedAlt = OH.getCorrectedAltitude(interDist)
