@@ -372,9 +372,21 @@ class correctTest(unittest.TestCase):
                                delta=0.0015)
 
     # Test return of the whole function
-    def test200_040_ShouldReturnTrueGetCorrectedAzimuth(self):
+    def test300_000_ShouldReturnTrueWholeFunction(self):
         expectedString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
                         'assumedLat':'35d59.7', 'assumedLong': '74d35.3',
+                        'correctedDistance':'104', 'correctedAzimuth':'0d36.8'}
+        inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
+                       'assumedLat':'35d59.7', 'assumedLong': '74d35.3'}
+
+        self.assertEquals(expectedString['correctedDistance'],
+                          DSP.dispatch(inputString)['correctedDistance']);
+        self.assertEquals(expectedString['correctedAzimuth'],
+                          DSP.dispatch(inputString)['correctedAzimuth']);
+
+    def test300_001_ShouldReturnTrueWholeFunction(self):
+        expectedString = {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',
+                        'assumedLat':'-53d38.4', 'assumedLong': '74d35.3',
                         'correctedDistance':'104', 'correctedAzimuth':'0d36.8'}
         inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
                        'assumedLat':'35d59.7', 'assumedLong': '74d35.3'}
