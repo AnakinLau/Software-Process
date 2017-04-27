@@ -74,3 +74,9 @@ def getCorrectedAltitude(interDist):
     ansInRad = math.asin(interDist)
     ansInDeg = math.degrees(ansInRad)
     return CH.convertNumToDegMinString(ansInDeg)
+
+def getCorrectedDistance(values, correctedAlt):
+    altInNum = CH.convertDegMinStrToNumber(values['altitude'])
+    corrtAltInNum = CH.convertDegMinStrToNumber(correctedAlt)
+    altInNum - corrtAltInNum
+
