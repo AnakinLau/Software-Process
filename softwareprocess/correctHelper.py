@@ -44,15 +44,15 @@ def checkLatFormat(lat):
             return False
         return True
 
-def checkLongFormat(lat):
-    if(not(isinstance(lat, basestring))):
+def checkLongFormat(long):
+    if(not(isinstance(long, basestring))):
         return False
     else:
-        if(lat.count('d') != 1):
+        if(long.count('d') != 1):
             return False
-        posOfd =     lat.find('d')
-        degString = lat[0: posOfd]
-        minString = lat[posOfd + 1: len(lat)]
+        posOfd = long.find('d')
+        degString = long[0: posOfd]
+        minString = long[posOfd + 1: len(long)]
 
         if(minString.count('.') != 1):
             return False
