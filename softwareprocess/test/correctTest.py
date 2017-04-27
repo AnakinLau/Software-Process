@@ -275,5 +275,5 @@ class correctTest(unittest.TestCase):
     def test100_504_ShouldNotReturnErrorInvalidAssumedLong(self):
         expectedString = {'error':'invalid assumedLong', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'13d42.3',
-                       'assumedLat':'-53d38.4', 'assumedLong':' 0d35.3'}
+                       'assumedLat':'-53d38.4', 'assumedLong':'0d35.3'}
         self.assertEquals(True, not('error' in DSP.dispatch(inputString)))
