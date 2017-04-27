@@ -178,3 +178,10 @@ class correctTest(unittest.TestCase):
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.62', 'altitude':'13d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
+
+    # Test return of Invalid Altitude Input Errors
+    def test100_200_ShouldNotReturnErrorInvalidLong(self):
+        expectedString = {'error':'invalid long', 'op': 'correct'}
+        inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'13d42.3',
+                       'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        self.assertEquals(True, not('error' in DSP.dispatch(inputString)))

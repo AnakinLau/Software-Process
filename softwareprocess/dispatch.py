@@ -82,8 +82,7 @@ def dispatch(values=None):
     # Correct operations------>
     elif(values['op'] == 'correct'):
         if(not(('lat' in values) and ('long' in values) and ('altitude' in values)
-               and ('assumedLat' in values) and ('assumedLat' in values)
-               and ('assumedLong' in values))):
+               and ('assumedLat' in values) and ('assumedLong' in values))):
             values['error'] = 'mandatory information is missing'
             return values
         if(OH.checkLatFormat(values['lat']) == False):
@@ -91,6 +90,9 @@ def dispatch(values=None):
             return values
         if(OH.checkLongFormat(values['long']) == False):
             values['error'] = 'invalid long'
+            return values
+        if(OH.checkAltitudeFormat(values['altitude']) == False):
+            values['error'] = 'invalid altitude'
             return values
 
         return values
