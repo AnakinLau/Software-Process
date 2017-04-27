@@ -357,3 +357,15 @@ class correctTest(unittest.TestCase):
         self.assertAlmostEqual(expectedString,
                                correctedDist,
                                delta=0.0025)
+
+    def test200_040_ShouldReturnTrueGetCorrectedAzimuth(self):
+        expectedString = '0d36.8'
+        inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
+                       'assumedLat':'35d59.7', 'assumedLong': '74d35.3'}
+        stringLHA = OH.getLHA(inputString)
+        interDist = OH.getInterDist(inputString, stringLHA)
+        correctedAlt = OH.getCorrectedAltitude(interDist)
+        azimuth = OH.getCorrectedAzimuth(inputString, interDist)
+        self.assertAlmostEqual(CH.convertDegMinStrToNumber(expectedString),
+                               CH.convertDegMinStrToNumber(azimuth),
+                               delta=0.0025)
