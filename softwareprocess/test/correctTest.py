@@ -181,43 +181,43 @@ class correctTest(unittest.TestCase):
 
     # Test return of Invalid Altitude Input Errors
     def test100_300_ShouldNotReturnErrorInvalidLong(self):
-        expectedString = {'error':'invalid long', 'op': 'correct'}
+        expectedString = {'error':'invalid altitude', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'13d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(True, not('error' in DSP.dispatch(inputString)))
 
     def test100_301_ShouldReturnErrorInvalidLong(self):
-        expectedString = {'error':'invalid long', 'op': 'correct'}
+        expectedString = {'error':'invalid altitude', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'90d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
 
     def test100_302_ShouldReturnErrorInvalidLong(self):
-        expectedString = {'error':'invalid long', 'op': 'correct'}
+        expectedString = {'error':'invalid altitude', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'0d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
 
     def test100_303_ShouldReturnErrorInvalidLong(self):
-        expectedString = {'error':'invalid long', 'op': 'correct'}
+        expectedString = {'error':'invalid altitude', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'1d60.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
 
     def test100_304_ShouldReturnErrorInvalidLong(self):
-        expectedString = {'error':'invalid long', 'op': 'correct'}
+        expectedString = {'error':'invalid altitude', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'1d-00.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
 
     def test100_305_ShouldReturnErrorInvalidLong(self):
-        expectedString = {'error':'invalid long', 'op': 'correct'}
+        expectedString = {'error':'invalid altitude', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'1d09.33',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
 
     def test100_306_ShouldReturnErrorInvalidLong(self):
-        expectedString = {'error':'invalid long', 'op': 'correct'}
+        expectedString = {'error':'invalid altitude', 'op': 'correct'}
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'-1d09.3',
                        'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertEquals(expectedString['error'], DSP.dispatch(inputString)['error'])
