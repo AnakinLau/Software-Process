@@ -71,14 +71,14 @@ def createStarDict():
 
 def checkBodyFormat(body):
     starDict = createStarDict()
-    if(not(body.title(), basestring) or not(body.title() in starDict)):
+    if(not(isinstance(body.title(), basestring)) or not(body.title() in starDict)):
         return False
     else:
         return True
 
 
 def checkDateFormat(dateInput):
-    if (not(dateInput, basestring)):
+    if (not(isinstance(dateInput, basestring))):
         return False
     try:
         dateObj = datetime.datetime.strptime(dateInput, '%Y-%m-%d')
@@ -90,7 +90,7 @@ def checkDateFormat(dateInput):
         return False
 
 def checkTimeFormat(timeInput):
-    if (not(timeInput, basestring)):
+    if (not(isinstance(timeInput, basestring))):
         return False
     try:
         timeObj = datetime.datetime.strptime(timeInput, '%H:%M:%S')
