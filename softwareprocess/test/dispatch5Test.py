@@ -302,11 +302,11 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(result, 75.8933333333, delta=0.895)
 
     def test300_130ShouldPredictTheLocation(self):
-        values = {'op': 'predict', 'name': 'Altair', 'date': '2016-01-17', 'time': '03:15:42'}
+        values = {'op': 'predict', 'body': 'Altair', 'date': '2016-01-17', 'time': '03:15:42'}
         self.assertAlmostEqual(DP.dispatch(values)['lat'],"8d54.8")
 
     def test300_140ShouldPredictTheLocation(self):
-        values = {'op': 'predict', 'name': 'Altair', 'date': '2016-01-17', 'time': '03:15:42'}
+        values = {'op': 'predict', 'body': 'Altair', 'date': '2016-01-17', 'time': '03:15:42'}
         data = DP.dispatch(values).get('long').split('d')
         result = int(data[0]) + float(data[1]) / 60
         self.assertAlmostEqual(result, 227.023333333, delta=2.023333333)
