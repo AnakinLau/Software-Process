@@ -94,6 +94,9 @@ def dispatch(values=None):
         if(OH.checkAltitudeFormat(values['altitude']) == False):
             values['error'] = 'invalid altitude'
             return values
+        if(OH.checkAssumedLatFormat(values['assumedLat']) == False):
+            values['error'] = 'invalid assumedLat'
+            return values
 
         return values
     elif(values['op'] == 'locate'):
