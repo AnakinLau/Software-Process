@@ -59,3 +59,6 @@ def getLHA(values):
     LHANumber = CH.convertDegMinStrToNumber(values['long']) \
                  + CH.convertDegMinStrToNumber(values['assumedLong'])
     return CH.convertNumToDegMinString(LHANumber)
+
+def getInterDist(value, LHA):
+    math.sin()
