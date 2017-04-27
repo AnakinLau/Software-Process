@@ -71,7 +71,7 @@ def createStarDict():
 
 def checkBodyFormat(body):
     starDict = createStarDict()
-    if(not(isinstance(body.title(), basestring)) or not(body.title() in starDict)):
+    if(not(isinstance(body, basestring)) or not(body.title() in starDict)):
         return False
     else:
         return True
