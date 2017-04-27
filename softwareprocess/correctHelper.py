@@ -33,6 +33,7 @@ def checkLatFormat(lat):
         if(len(degString) == 0):
             return False
         if(not(degString.isdigit())):
+            print('degString is not a digit ={0}', format(degString))
             return False
         if(int(degString) <= -90 or int(degString) >= 90):
             return False

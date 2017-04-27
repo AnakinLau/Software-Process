@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0e6ed8a-7ecb-4d63-9a84-e59a13b56452" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/softwareprocess/correctHelper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/dispatch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/correctHelper.py" afterPath="$PROJECT_DIR$/softwareprocess/correctHelper.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/test/correctTest.py" afterPath="$PROJECT_DIR$/softwareprocess/test/correctTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +23,8 @@
           <file leaf-file-name="predictHelper.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/softwareprocess/predictHelper.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="76" selection-end-column="19" />
+                <state relative-caret-position="193">
+                  <caret line="112" column="13" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="13" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                     <element signature="e#145#4032#0" expanded="false" />
@@ -50,8 +48,8 @@
           <file leaf-file-name="predictTest.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                <state relative-caret-position="272">
+                  <caret line="244" column="13" lean-forward="false" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="13" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -59,13 +57,25 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
+                <state relative-caret-position="193">
+                  <caret line="107" column="17" lean-forward="false" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="17" />
                   <folding>
                     <element signature="e#397#408#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="correctHelper.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/softwareprocess/correctHelper.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="439">
+                  <caret line="35" column="67" lean-forward="true" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -100,20 +110,8 @@
           <file leaf-file-name="correctTest.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/softwareprocess/test/correctTest.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="269">
-                  <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
-                  <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="correctHelper.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/softwareprocess/correctHelper.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+                <state relative-caret-position="422">
+                  <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
@@ -143,6 +141,7 @@
       <find>D</find>
       <find>body</find>
       <find>cumProg</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,9 +163,9 @@
         <option value="$PROJECT_DIR$/softwareprocess/test/dispatch5Test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/predictHelper.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/predictTest.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/correctHelper.py" />
         <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/correctTest.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/correctHelper.py" />
       </list>
     </option>
   </component>
@@ -498,18 +497,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.26 at 23h 40m 45s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.26 at 23h 41m 36s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.26 at 23h 41m 39s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 00h 24m 33s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.27 at 00h 25m 05s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -526,6 +513,18 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.27 at 00h 32m 05s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 05m 54s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 07m 12s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 08m 32s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 01h 11m 04s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -956,23 +955,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch5Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="-256">
+          <caret line="314" column="8" lean-forward="false" selection-start-line="314" selection-start-column="8" selection-end-line="314" selection-end-column="8" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/predictHelper.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/test/correctTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="76" selection-end-column="19" />
+        <state relative-caret-position="422">
+          <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="8" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#145#4032#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/test/predictTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="244" column="13" lean-forward="false" selection-start-line="244" selection-start-column="8" selection-end-line="244" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="107" column="17" lean-forward="false" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="17" />
+          <folding>
+            <element signature="e#397#408#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -987,40 +1005,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/predictHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="112" column="13" lean-forward="false" selection-start-line="112" selection-start-column="8" selection-end-line="112" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#145#4032#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/correctHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="88" column="39" lean-forward="true" selection-start-line="88" selection-start-column="39" selection-end-line="88" selection-end-column="39" />
-          <folding>
-            <element signature="e#397#408#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch5Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256">
-          <caret line="314" column="8" lean-forward="false" selection-start-line="314" selection-start-column="8" selection-end-line="314" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test/correctTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+        <state relative-caret-position="439">
+          <caret line="35" column="67" lean-forward="true" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
