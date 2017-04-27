@@ -292,6 +292,16 @@ class correctTest(unittest.TestCase):
                                delta=0.0035)
         #self.assertEquals(expectedString, OH.getLHA(inputString))
 
+    def test200_001_ShouldReturnTrueGetLHA(self):
+        expectedString = '228d40.7'
+        inputString = {'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',
+                       'assumedLat':'35d59.7', 'assumedLong': '74d35.3'}
+        stringAnsw = OH.getLHA(inputString)
+
+        self.assertAlmostEqual(CH.convertDegMinStrToNumber(expectedString),
+                               CH.convertDegMinStrToNumber(stringAnsw),
+                               delta=0.0035)
+
     # Test return of getLHA
     def test200_010_ShouldReturnTrueGetInterDist(self):
         expectedString = -0.789
