@@ -100,6 +100,7 @@ def dispatch(values=None):
         if(OH.checkCorrectInputFormat(values['assumedLong'], 'AssumedLong') == False):
             values['error'] = 'invalid assumedLong'
             return values
+        LHA = OH.getLHA(values)
 
         return values
     elif(values['op'] == 'locate'):

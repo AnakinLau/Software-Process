@@ -55,3 +55,7 @@ def checkCorrectInputFormat(checkVal, valType):
                 return False
         return True
 
+def getLHA(values):
+    LHANumber = CH.convertDegMinStrToNumber(values['long']) \
+                 + CH.convertDegMinStrToNumber(values['long'])
+    return CH.convertNumToDegMinString(LHANumber)

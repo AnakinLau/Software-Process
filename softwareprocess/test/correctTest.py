@@ -4,6 +4,7 @@ import softwareprocess.dispatch as DSP
 import softwareprocess.conversionHelper as CH
 import softwareprocess.adjustHelper as AH
 import softwareprocess.predictHelper as PH
+import softwareprocess.correctHelper as OH
 
 import math
 
@@ -277,3 +278,11 @@ class correctTest(unittest.TestCase):
         inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'13d42.3',
                        'assumedLat':'-53d38.4', 'assumedLong':'0d35.3'}
         self.assertEquals(True, not('error' in DSP.dispatch(inputString)))
+
+    # Calculation Portion
+    # Test return of getLHA
+    def test200_000_ShouldReturnTrueGetLHA(self):
+        expectedString = {'170d17.0'}
+        inputString = {'op':'correct', 'lat':'89d00.0', 'long':'95d41.6', 'altitude':'13d42.3',
+                       'assumedLat':'-53d38.4', 'assumedLong': '74d35.3'}
+        self.assertEquals(expectedString, OH.getLHA(inputString))
