@@ -89,6 +89,9 @@ def dispatch(values=None):
         if(OH.checkLatFormat(values['lat']) == False):
             values['error'] = 'invalid lat'
             return values
+        if(OH.checkLongFormat(values['long']) == False):
+            values['error'] = 'invalid long'
+            return values
 
         return values
     elif(values['op'] == 'locate'):
