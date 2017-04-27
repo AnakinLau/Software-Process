@@ -319,7 +319,7 @@ class correctTest(unittest.TestCase):
         stringLHA = OH.getLHA(inputString)
         self.assertAlmostEqual(expectedString,
                                OH.getInterDist(inputString, stringLHA),
-                               delta=0.0035)
+                               delta=0.0015)
 
     # Test return of getCorrectedAltitude
     def test200_020_ShouldReturnTrueGetCorrectedAltitude(self):

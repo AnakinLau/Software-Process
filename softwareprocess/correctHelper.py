@@ -81,4 +81,5 @@ def getCorrectedDistance(values, correctedAlt):
     corrDistString = CH.convertNumToDegMinString(altInNum - corrtAltInNum)
     return CH.convertDegMinToArcMinInt(corrDistString)
 
-
+def getCorrectedAzimuth(values, interDist):
+    
