@@ -29,19 +29,28 @@ The following is an example of how your customer plans to use the code:
 						
 #### Example Code 
 ```
-import dispatch as dispatch						
-sighting = {'op':'adjust', 'observation':'015d04.9', 'height':'6.0', 'temperature':'72','pressure':'1010', 'horizon':'artificial'}						
-result1 = dispatch.dispatch(sighting)						
-sighting['op']='predict' 						
-sighting['name']='Betelgeuse' 						
-sighting['date']='2016-01-17' 						
-sighting['time']='03:15:42' 						
-result2 = dispatch.dispatch(sighting)						
+import dispatch as dispatch
+sighting = {'op':'adjust', 'observation':'015d04.9', 'height':'6.0', 'temperature':'72','pressure':'1010', 'horizon':'artificial'}
+sighting = dispatch.dispatch(sighting)
+sighting['op']='predict' 
+sighting['body']='Alderbaran' 
+sighting['date']='2016-01-17' 
+sighting['time']='03:15:42' 
+sighting = dispatch.dispatch(sighting)
+sighting['op']='correct' 
+sighting['assumedLat']=' -53d38.4' 
+sighting['assumedLong']='74d35.3' 
+sighting = dispatch.dispatch(sighting)					
 ```
 
-#### AWL Lambda Example						
-https://2kr26wpool.execute-api.us-east-1.amazonaws.com/prod/navigate/?op=adjust&observation=015d04.9&height=6.0&temperature=72&pressure=1010&horizon=artificial						
-https://2kr26wpool.execute-api.us-east-1.amazonaws.com/prod/navigate/?op=predict&observation=015d04.9&height=6.0&temperature=72&pressure=1010&horizon=artificial&name=Betelgeuse&date=2016-01-17%time=03%3A15%3A42
+#### AWL Lambda Examples (via my Lambda Link)						
+
+https://w4jn7nvmwj.execute-api.us-west-2.amazonaws.com/prod/navigation/?op=adjust&observation=015d04.9&height=6.0&temperature=72&pressure=1010&horizon=artificial	
+
+https://w4jn7nvmwj.execute-api.us-west-2.amazonaws.com/prod/navigation/?op=predict&observation=015d04.9&height=6.0&temperature=72&pressure=1010&horizon=artificial&name=Betelgeuse&date=2016-01-17&time=03%3A15%3A42
+	
+https://w4jn7nvmwj.execute-api.us-west-2.amazonaws.com/prod/navigation/?op=correct&lat=16d32.3&long=95d41.6&altitude=13d42.3&assumedLat=-53d38.4&assumedLong=74d35.3	
+	
 
 ## Process
 #### Plan Project	
