@@ -1,7 +1,7 @@
 # CSSE
-For Software Process Course in Auburn University Software Engineering
+#### For Software Process Course in Auburn University Software Engineering
 
-## Purpose
+# Purpose
 The premise of this project is to create a program in Python that will serve as functions on AWS Lambda using various software developement processes and disciplines, with the focus being Test Driven Developement (TDD).
 
 #### We are to record specifically the following inside of a spreadsheet during our project: 
@@ -22,7 +22,7 @@ Record your process and product data from all previous programming assignments. 
 This tab is optional. Used to record great ideas, suggestions, etc.					
 
 
-## Project Description
+# Project Description
 We are developing a set of microservices that derives geographic position from star sighting information. Each microservice receives its input as a Python dictionary represented by a URL-encoded string and outputs its result as UTF-8 string of a Python dictionary. This assignment has you to write a function that adjusts celestial sightings based on the circumstances of how the sighting was made.   						
 ## Specification by Example						
 The following is an example of how your customer plans to use the code:						
@@ -52,7 +52,7 @@ https://w4jn7nvmwj.execute-api.us-west-2.amazonaws.com/prod/navigation/?op=predi
 https://w4jn7nvmwj.execute-api.us-west-2.amazonaws.com/prod/navigation/?op=correct&lat=16d32.3&long=95d41.6&altitude=13d42.3&assumedLat=-53d38.4&assumedLong=74d35.3	
 	
 
-## Process
+# Process
 #### Plan Project	
   - Transfer process information from the previous assignment (record in Historical Data tab) 
   - Write as many acceptance tests as you feel are necessary to understand the assignment (record in Acceptance tab)
