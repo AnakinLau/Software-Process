@@ -25,7 +25,7 @@ This tab is optional. Used to record great ideas, suggestions, etc.
 # Project Description
 We are developing a set of microservices that derives geographic position from star sighting information. Each microservice receives its input as a Python dictionary represented by a URL-encoded string and outputs its result as UTF-8 string of a Python dictionary. This assignment has you to write a function that adjusts celestial sightings based on the circumstances of how the sighting was made.   						
 ## Specification by Example						
-The following is an example of how your customer plans to use the code:						
+The following is an example of how the customer plans to use the code:						
 						
 #### Example Code 
 ```
