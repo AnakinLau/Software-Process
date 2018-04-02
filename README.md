@@ -1,5 +1,6 @@
-# CSSE
+# Software-Process
 #### For Software Process Course in Auburn University Software Engineering
+(repository formerly named CSSE)
 
 # Purpose
 The premise of this project is to create a program in Python that will serve as functions on AWS Lambda using various software developement processes and disciplines, with the focus being Test Driven Developement (TDD).
